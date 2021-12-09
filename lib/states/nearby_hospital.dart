@@ -38,6 +38,7 @@ class _NearbyHospitalState extends State<NearbyHospital> {
           child: Column(
             children: [
               newMap(),
+              findHospitalbutton(),
             ],
           ),
         ),
@@ -52,7 +53,21 @@ class _NearbyHospitalState extends State<NearbyHospital> {
     findLocation();
   }
 
-  
+  Container findHospitalbutton() {
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 16),
+      width: 250,
+      height: 50,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
+        onPressed: () => findHospital(),
+        child: const Text(
+          'Search Hospital',
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
+    );
+  }
 
   Future<void> findHospital() async {
     Position? position = await findPostion();
@@ -106,7 +121,7 @@ class _NearbyHospitalState extends State<NearbyHospital> {
                   markerId: MarkerId('id'),
                   position: LatLng(lat!, lng!),
                   infoWindow: InfoWindow(
-                      title: 'โรงพยาบาลกรุงเทพ',
+                      title: 'คุณอยู่ที่นี่',
                       snippet: 'lat = $lat, lng = $lng'),
                 )
               },
