@@ -250,7 +250,7 @@ class _CreateAccountState extends State<CreateAccount> {
       child: ElevatedButton(
         onPressed: () {
           processRegister();
-          onPressed: () => Navigator.pushNamed(context, '/diagnose');
+          onPressed: () => Navigator.pushNamed(context, '/authen');
         },
         child: Text('Create New Account'),
       ),

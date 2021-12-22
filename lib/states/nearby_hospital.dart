@@ -8,7 +8,6 @@ import 'package:predoc1/models/user_model.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/my_dialog.dart';
 import 'package:predoc1/widgets/show_text.dart';
-import 'package:google_place/google_place.dart';
 
 class NearbyHospital extends StatefulWidget {
   const NearbyHospital({Key? key}) : super(key: key);
@@ -52,6 +51,7 @@ class _NearbyHospitalState extends State<NearbyHospital> {
     // TODO: implement initState
     super.initState();
     findLocation();
+    findPostion();
   }
 
   Container findHospitalbutton() {
@@ -91,6 +91,7 @@ class _NearbyHospitalState extends State<NearbyHospital> {
       },
     );
   }
+  
 
   Future<Position?> findPostion() async {
     Position? position;

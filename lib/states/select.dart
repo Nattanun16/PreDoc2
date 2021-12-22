@@ -4,12 +4,25 @@ import 'package:predoc1/utility/my_constant.dart';
 class Select extends StatefulWidget {
   const Select({Key? key}) : super(key: key);
 
+  get auth => null;
+
   @override
   _SelectState createState() => _SelectState();
+
+  void onSignedOut() {}
 }
 
 class _SelectState extends State<Select> {
   @override
+  _signOut() async {
+    try {
+      await widget.auth.signOut();
+      widget.onSignedOut();
+    } catch (e) {
+      print(e);
+    }
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       body: GestureDetector(
@@ -65,7 +78,7 @@ class _SelectState extends State<Select> {
       padding: const EdgeInsets.all(16.0),
       margin: const EdgeInsets.symmetric(vertical: 16),
       width: 250,
-      height: 60  ,
+      height: 60,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
         onPressed: () => Navigator.pushNamed(context, '/nearbyHospital'),
