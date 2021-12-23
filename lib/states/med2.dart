@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:predoc1/utility/my_constant.dart';
+import 'package:predoc1/utility/decision_tree.dart';
 
 // ปวดหัว
 
@@ -53,9 +54,11 @@ class _Med2State extends State<Med2> {
         Icons.navigate_before,
         size: 36.0,
       ),
-      onPressed: () => Navigator.pushNamed(context, '/diagnose'),
+      onPressed: () =>
+          Navigator.pushNamed(context, '/diagnose' + med10a.left.label),
     );
   }
+
 // ปวดหัวครึ่งซีก
   Container med3Button() {
     return Container(
@@ -72,6 +75,7 @@ class _Med2State extends State<Med2> {
       ),
     );
   }
+
 // ปวดหัวทั้งซ้ายและขวา
   Container med4Button() {
     return Container(
