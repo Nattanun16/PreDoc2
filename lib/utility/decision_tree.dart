@@ -1,3 +1,4 @@
+library decisiontree;
 class Node {
   String label;
   double gini;
