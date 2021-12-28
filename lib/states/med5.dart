@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/decision_tree.dart';
 
-// อาเจียน
+// เจ็บหน้าอก
 
-class Med30 extends StatefulWidget {
-  const Med30({Key? key}) : super(key: key);
+class Med5 extends StatefulWidget {
+  const Med5({Key? key}) : super(key: key);
 
   @override
-  _Med30State createState() => _Med30State();
+  _Med5State createState() => _Med5State();
 }
 
-class _Med30State extends State<Med30> {
-  var medNode = med30;
+class _Med5State extends State<Med5> {
+  var medNode = med5;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +39,7 @@ class _Med30State extends State<Med30> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            'คุณมีอาการ' + 'อาเจียน' + 'หรือไม่?',
+            'คุณมีอาการ'+'เจ็บหน้าอก'+'หรือไม่?',
             style: MyConstant().h2Style(),
           ),
           YesButton(),
@@ -55,10 +55,12 @@ class _Med30State extends State<Med30> {
         Icons.navigate_before,
         size: 36.0,
       ),
-      onPressed: () => Navigator.pushNamed(context, '/diagnose'),
+      onPressed: () =>
+          Navigator.pushNamed(context, '/diagnose'),
     );
   }
 
+// ปวดหัวครึ่งซีก
   Container YesButton() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 48),
@@ -66,8 +68,7 @@ class _Med30State extends State<Med30> {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () =>
-            Navigator.pushNamed(context, '/' + medNode.right.label),
+        onPressed: () => Navigator.pushNamed(context, '/'+medNode.right.label),
         child: const Text(
           'ใช่',
           style: TextStyle(fontSize: 20),
@@ -76,6 +77,7 @@ class _Med30State extends State<Med30> {
     );
   }
 
+// ปวดหัวทั้งซ้ายและขวา
   Container NoButton() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 0.25),
@@ -83,7 +85,7 @@ class _Med30State extends State<Med30> {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/' + medNode.left.label),
+        onPressed: () => Navigator.pushNamed(context, '/'+medNode.left.label),
         child: const Text(
           'ไม่ใช่',
           style: TextStyle(fontSize: 20),

@@ -64,7 +64,7 @@ class _SelectState extends State<Select> {
       height: 55,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/diagnose'),
+        onPressed: () => Navigator.pushNamed(context, '/med5'),
         child: const Text(
           'ทำแบบประเมินโรคเบื้องต้นจากอาการของผู้ใช้งาน',
           style: TextStyle(fontSize: 20),

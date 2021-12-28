@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:predoc1/utility/decision_tree.dart';
 import 'package:predoc1/utility/my_constant.dart';
+import 'package:predoc1/utility/decision_tree.dart';
 
-class Disease extends StatefulWidget {
-  const Disease({Key? key}) : super(key: key);
+class T45 extends StatefulWidget {
+  const T45({Key? key}) : super(key: key);
 
   @override
-  _DiseaseState createState() => _DiseaseState();
+  _T45State createState() => _T45State();
 }
 
-class _DiseaseState extends State<Disease> {
+class _T45State extends State<T45> {
   var medNode = t45;
   @override
   Widget build(BuildContext context) {
@@ -68,7 +68,7 @@ class _DiseaseState extends State<Disease> {
 
   Widget symptoms2Text() {
     return Text(
-      'ปวดท้อง',
+      medNode.get_id().toString(),
       style: MyConstant().h2Style(),
     );
   }
@@ -82,7 +82,7 @@ class _DiseaseState extends State<Disease> {
 
   Widget symptoms4Text() {
     return Text(
-      medNode.get_id().toString(),
+      'ไข้เลือดออก',
       style: MyConstant().h2Style(),
     );
   }
