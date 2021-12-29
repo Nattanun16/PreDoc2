@@ -55,7 +55,7 @@ class _Med2State extends State<Med2> {
         size: 36.0,
       ),
       onPressed: () =>
-          Navigator.pushNamed(context, '/diagnose' + med10a.left.label),
+          Navigator.pushNamed(context, '/diagnose'),
     );
   }
 
@@ -67,7 +67,7 @@ class _Med2State extends State<Med2> {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/level'),
+        onPressed: () => Navigator.pushNamed(context, '/level'+ med10a.left.label),
         child: const Text(
           'ปวดหัวครึ่งซีก',
           style: TextStyle(fontSize: 20),

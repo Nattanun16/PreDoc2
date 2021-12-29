@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:predoc1/utility/my_constant.dart';
+import 'package:predoc1/utility/decision_tree.dart';
 
 class Med7 extends StatefulWidget {
   const Med7({Key? key}) : super(key: key);
@@ -51,7 +52,7 @@ class _Med7State extends State<Med7> {
         Icons.navigate_before,
         size: 36.0,
       ),
-      onPressed: () => Navigator.pushNamed(context, '/diagnose'),
+      onPressed: () => Navigator.pushNamed(context, '/diagnose'+ med30.left.label),
     );
   }
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:predoc1/utility/my_constant.dart';
+import 'package:predoc1/utility/decision_tree.dart';
 
 class Med9 extends StatefulWidget {
   const Med9({Key? key}) : super(key: key);
@@ -9,6 +10,8 @@ class Med9 extends StatefulWidget {
 }
 
 class _Med9State extends State<Med9> {
+  var this_node = Med9;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +37,11 @@ class _Med9State extends State<Med9> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-         Text('ปวดท้อง',style: MyConstant().h2Style(),),med10Button(),
+          Text(
+            'ปวดท้อง',
+            style: MyConstant().h2Style(),
+          ),
+          med10Button(),
         ],
       ),
     );
@@ -46,10 +53,11 @@ class _Med9State extends State<Med9> {
         Icons.navigate_before,
         size: 36.0,
       ),
-      onPressed: () => Navigator.pushNamed(context, '/diagnose'),
+      onPressed: () =>
+          Navigator.pushNamed(context, '/diagnose'),
     );
   }
-  
+
   Container med10Button() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 0.25),
@@ -65,7 +73,8 @@ class _Med9State extends State<Med9> {
       ),
     );
   }
-Container med11Button() {
+
+  Container med11Button() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 0.25),
       width: 250,
@@ -97,5 +106,4 @@ Container med11Button() {
       ),
     );
   }
-
 }

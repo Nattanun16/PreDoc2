@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:predoc1/states/med2.dart';
 import 'package:predoc1/utility/my_constant.dart';
+import 'package:predoc1/utility/decision_tree.dart';
 
 class Diagnose extends StatefulWidget {
   const Diagnose({Key? key}) : super(key: key);
@@ -249,7 +250,7 @@ class _DiagnoseState extends State<Diagnose> {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/med8'),
+        onPressed: () => Navigator.pushNamed(context, '/' + med5.left.label),
         child: const Text(
           'ชา',
           style: TextStyle(fontSize: 20),

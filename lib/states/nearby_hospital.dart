@@ -8,6 +8,8 @@ import 'package:predoc1/models/user_model.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/my_dialog.dart';
 import 'package:predoc1/widgets/show_text.dart';
+import 'package:predoc1/utility/decision_tree.dart';
+import 'package:google_place/google_place.dart';
 
 class NearbyHospital extends StatefulWidget {
   const NearbyHospital({Key? key}) : super(key: key);
@@ -79,6 +81,10 @@ class _NearbyHospitalState extends State<NearbyHospital> {
         print('lat = $lat, lng = $lng');
       },
     );
+    var googlePlace = GooglePlace("AIzaSyA0vswYchYGlZmlU5KpHG69EPz9_H5_s5s");
+    var result = await googlePlace.search.getNearBySearch(
+        Location(lat: lat, lng: lng), 1500,
+        type: "Hospital", keyword: "Hospital or linic");
   }
 
   Future<void> findLocation() async {
@@ -91,7 +97,6 @@ class _NearbyHospitalState extends State<NearbyHospital> {
       },
     );
   }
-  
 
   Future<Position?> findPostion() async {
     Position? position;
