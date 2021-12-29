@@ -2,17 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/decision_tree.dart';
 
+// อาเจียน
+
 class Med30 extends StatefulWidget {
-  const Med30({ Key? key }) : super(key: key);
+  const Med30({Key? key}) : super(key: key);
 
   @override
   _Med30State createState() => _Med30State();
 }
 
 class _Med30State extends State<Med30> {
+  var medNode = med30;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: GestureDetector(
+    return Scaffold(
+      body: GestureDetector(
         onTap: () => FocusScope.of(context).requestFocus(FocusScopeNode()),
         behavior: HitTestBehavior.opaque,
         child: SafeArea(
@@ -26,16 +30,20 @@ class _Med30State extends State<Med30> {
           ),
         ),
       ),
-      
     );
   }
 
-Widget content() {
+  Widget content() {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-         Text('สิ่งที่อาเจียนออกมามีลักษณะอย่างไร ?',style: MyConstant().h2Style(),),
+          Text(
+            'คุณมีอาการ' + 'อาเจียน' + 'หรือไม่?',
+            style: MyConstant().h2Style(),
+          ),
+          YesButton(),
+          NoButton(),
         ],
       ),
     );
@@ -51,38 +59,36 @@ Widget content() {
     );
   }
 
-  Container med30Button() {
+  Container YesButton() {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 0.25),
+      margin: const EdgeInsets.symmetric(vertical: 48),
       width: 250,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/med16'),
+        onPressed: () =>
+            Navigator.pushNamed(context, '/' + medNode.right.label),
         child: const Text(
-          'อาเจียน',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    );
-  }
-// อาเจียนมีสีเหลืองปนเขียว
-  Container med70Button() {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 0.25),
-      width: 250,
-      height: 50,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/med16'),
-        child: const Text(
-          'อาเจียนมีสีเหลืองปนเขียว',
+          'ใช่',
           style: TextStyle(fontSize: 20),
         ),
       ),
     );
   }
 
-  
-
+  Container NoButton() {
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 0.25),
+      width: 250,
+      height: 50,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
+        onPressed: () => Navigator.pushNamed(context, '/' + medNode.left.label),
+        child: const Text(
+          'ไม่ใช่',
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
+    );
+  }
 }

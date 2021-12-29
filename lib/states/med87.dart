@@ -1,28 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:predoc1/utility/my_constant.dart';
+import 'package:predoc1/utility/decision_tree.dart';
 
-class Select extends StatefulWidget {
-  const Select({Key? key}) : super(key: key);
+// ชารอบปาก
 
-  get auth => null;
+class Med87 extends StatefulWidget {
+  const Med87({Key? key}) : super(key: key);
 
   @override
-  _SelectState createState() => _SelectState();
-
-  void onSignedOut() {}
+  _Med87State createState() => _Med87State();
 }
 
-class _SelectState extends State<Select> {
+class _Med87State extends State<Med87> {
+  var medNode = med87;
   @override
-  _signOut() async {
-    try {
-      await widget.auth.signOut();
-      widget.onSignedOut();
-    } catch (e) {
-      print(e);
-    }
-  }
-
   Widget build(BuildContext context) {
     return Scaffold(
       body: GestureDetector(
@@ -32,6 +23,7 @@ class _SelectState extends State<Select> {
           child: SingleChildScrollView(
             child: Stack(
               children: [
+                backButton(context),
                 content(),
               ],
             ),
@@ -47,43 +39,53 @@ class _SelectState extends State<Select> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            'คุณกำลังค้นหาอะไร ?',
+            'คุณมีอาการ'+'ชารอบปาก'+'หรือไม่?',
             style: MyConstant().h2Style(),
           ),
-          diagnose(),
-          hospital(),
+          YesButton(),
+          NoButton(),
         ],
       ),
     );
   }
 
-  Container diagnose() {
+  IconButton backButton(BuildContext context) {
+    return IconButton(
+      icon: const Icon(
+        Icons.navigate_before,
+        size: 36.0,
+      ),
+      onPressed: () =>
+          Navigator.pushNamed(context, '/diagnose'),
+    );
+  }
+
+  Container YesButton() {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 16),
+      margin: const EdgeInsets.symmetric(vertical: 48),
       width: 250,
-      height: 55,
+      height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/med5'),
+        onPressed: () => Navigator.pushNamed(context, '/'+medNode.right.label),
         child: const Text(
-          'ทำแบบประเมินโรคเบื้องต้นจากอาการของผู้ใช้งาน',
+          'ใช่',
           style: TextStyle(fontSize: 20),
         ),
       ),
     );
   }
 
-  Container hospital() {
+  Container NoButton() {
     return Container(
-      padding: const EdgeInsets.all(16.0),
-      margin: const EdgeInsets.symmetric(vertical: 16),
+      margin: const EdgeInsets.symmetric(vertical: 0.25),
       width: 250,
-      height: 60,
+      height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/nearbyHospital'),
+        onPressed: () => Navigator.pushNamed(context, '/'+medNode.left.label),
         child: const Text(
-          'ค้นหาสถานพยาบาลใกล้เคียงคุณ',
+          'ไม่ใช่',
           style: TextStyle(fontSize: 20),
         ),
       ),
