@@ -85,7 +85,7 @@ class _NearbyHospitalState extends State<NearbyHospital> {
     var googlePlace = GooglePlace("AIzaSyA0vswYchYGlZmlU5KpHG69EPz9_H5_s5s");
     var result = await googlePlace.search.getNearBySearch(
         Location(lat: lat, lng: lng), 1500,
-        type: "Hospital", keyword: "Hospital or linic");
+        type: "Hospital", keyword: "Hospital or clinic");
   }
 
   Future<void> findLocation() async {
@@ -98,7 +98,6 @@ class _NearbyHospitalState extends State<NearbyHospital> {
       },
     );
   }
-  
 
   Future<Position?> findPostion() async {
     Position? position;
