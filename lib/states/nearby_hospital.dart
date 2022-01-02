@@ -131,6 +131,12 @@ class _NearbyHospitalState extends State<NearbyHospital> {
                   infoWindow: InfoWindow(
                       title: 'คุณอยู่ที่นี่',
                       snippet: 'lat = $lat, lng = $lng'),
+                ),
+                Marker(
+                  markerId: const MarkerId('id'),
+                  position: LatLng(lat!, lng!),
+                  infoWindow: InfoWindow(
+                      title: ';-;', snippet: 'lat = $lat, lng = $lng'),
                 )
               },
             ),
