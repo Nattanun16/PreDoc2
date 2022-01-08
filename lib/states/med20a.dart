@@ -2,14 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/decision_tree.dart';
 
-class Med7 extends StatefulWidget {
-  const Med7({Key? key}) : super(key: key);
+// ไอแห้ง
+
+class Med20a extends StatefulWidget {
+  const Med20a({Key? key}) : super(key: key);
 
   @override
-  _Med7State createState() => _Med7State();
+  _Med20aState createState() => _Med20aState();
 }
 
-class _Med7State extends State<Med7> {
+class _Med20aState extends State<Med20a> {
+  var medNode =med20a ;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,11 +39,11 @@ class _Med7State extends State<Med7> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            'ปากคุณเบี้ยวไปทางไหน?',
+            'คุณมีอาการ'+'ไอแห้ง'+'หรือไม่?',
             style: MyConstant().h2Style(),
           ),
-          leftButton(),
-          rightButton(),
+          YesButton(),
+          NoButton(),
         ],
       ),
     );
@@ -52,38 +55,39 @@ class _Med7State extends State<Med7> {
         Icons.navigate_before,
         size: 36.0,
       ),
-      onPressed: () => Navigator.pushNamed(context, '/diagnose'+ med30.left.label),
+      onPressed: () =>
+          Navigator.pushNamed(context, '/select'),
     );
   }
 
-// ข้างซ้าย
-  Container leftButton() {
+// ปวดหัวครึ่งซีก
+  Container YesButton() {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 16),
+      margin: const EdgeInsets.symmetric(vertical: 48),
       width: 250,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/diagnose'),
+        onPressed: () => Navigator.pushNamed(context, '/'+medNode.right.label),
         child: const Text(
-          'ข้างซ้าย',
+          'ใช่',
           style: TextStyle(fontSize: 20),
         ),
       ),
     );
   }
 
-  // ข้างขวา
-  Container rightButton() {
+// ปวดหัวทั้งซ้ายและขวา
+  Container NoButton() {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 16),
+      margin: const EdgeInsets.symmetric(vertical: 0.25),
       width: 250,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/diagnose'),
+        onPressed: () => Navigator.pushNamed(context, '/'+medNode.left.label),
         child: const Text(
-          'ข้างขวา',
+          'ไม่ใช่',
           style: TextStyle(fontSize: 20),
         ),
       ),

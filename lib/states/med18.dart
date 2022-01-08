@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/decision_tree.dart';
 
-// เจ็บหน้าอก
+// อ่อนเพลีย
 
-class Med5 extends StatefulWidget {
-  const Med5({Key? key}) : super(key: key);
+class Med18 extends StatefulWidget {
+  const Med18({Key? key}) : super(key: key);
 
   @override
-  _Med5State createState() => _Med5State();
+  _Med18State createState() => _Med18State();
 }
 
-class _Med5State extends State<Med5> {
-  var medNode = med5;
+class _Med18State extends State<Med18> {
+  var medNode = med18a;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +39,7 @@ class _Med5State extends State<Med5> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            'คุณมีอาการ'+'เจ็บหน้าอก'+'หรือไม่?',
+            'คุณมีอาการ'+'อ่อนเพลีย'+'หรือไม่?',
             style: MyConstant().h2Style(),
           ),
           YesButton(),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/decision_tree.dart';
 
-// ปวดหัว
+// ปวดศีรษะ
 
 class Med2 extends StatefulWidget {
   const Med2({Key? key}) : super(key: key);
@@ -12,6 +12,7 @@ class Med2 extends StatefulWidget {
 }
 
 class _Med2State extends State<Med2> {
+  var medNode = med2;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,11 +39,11 @@ class _Med2State extends State<Med2> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            'คุณมีอาการปวดหัวอย่างไร?',
+            'คุณมีอาการ'+'ปวดศีรษะ'+'หรือไม่?',
             style: MyConstant().h2Style(),
           ),
-          med3Button(),
-          med4Button(),
+          YesButton(),
+          NoButton(),
         ],
       ),
     );
@@ -55,21 +56,21 @@ class _Med2State extends State<Med2> {
         size: 36.0,
       ),
       onPressed: () =>
-          Navigator.pushNamed(context, '/diagnose'),
+          Navigator.pushNamed(context, '/select'),
     );
   }
 
 // ปวดหัวครึ่งซีก
-  Container med3Button() {
+  Container YesButton() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 48),
       width: 250,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/level'+ med10a.left.label),
+        onPressed: () => Navigator.pushNamed(context, '/'+medNode.right.label),
         child: const Text(
-          'ปวดหัวครึ่งซีก',
+          'ใช่',
           style: TextStyle(fontSize: 20),
         ),
       ),
@@ -77,16 +78,16 @@ class _Med2State extends State<Med2> {
   }
 
 // ปวดหัวทั้งซ้ายและขวา
-  Container med4Button() {
+  Container NoButton() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 0.25),
       width: 250,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/level'),
+        onPressed: () => Navigator.pushNamed(context, '/'+medNode.left.label),
         child: const Text(
-          'ปวดหัวทั้งซ้ายและขวา',
+          'ไม่ใช่',
           style: TextStyle(fontSize: 20),
         ),
       ),

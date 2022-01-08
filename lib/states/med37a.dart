@@ -2,16 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/decision_tree.dart';
 
-class Med9 extends StatefulWidget {
-  const Med9({Key? key}) : super(key: key);
+// เหนื่อยง่าย
+
+class Med37a extends StatefulWidget {
+  const Med37a({Key? key}) : super(key: key);
 
   @override
-  _Med9State createState() => _Med9State();
+  _Med37aState createState() => _Med37aState();
 }
 
-class _Med9State extends State<Med9> {
-  var this_node = Med9;
-
+class _Med37aState extends State<Med37a> {
+  var medNode = med37a;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,10 +39,11 @@ class _Med9State extends State<Med9> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            'ปวดท้อง',
+            'คุณมีอาการ'+'เหนื่อยง่าย'+'หรือไม่?',
             style: MyConstant().h2Style(),
           ),
-          med10Button(),
+          YesButton(),
+          NoButton(),
         ],
       ),
     );
@@ -54,53 +56,38 @@ class _Med9State extends State<Med9> {
         size: 36.0,
       ),
       onPressed: () =>
-          Navigator.pushNamed(context, '/diagnose'),
+          Navigator.pushNamed(context, '/select'),
     );
   }
 
-  Container med10Button() {
+// ปวดหัวครึ่งซีก
+  Container YesButton() {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 0.25),
+      margin: const EdgeInsets.symmetric(vertical: 48),
       width: 250,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/level'),
+        onPressed: () => Navigator.pushNamed(context, '/'+medNode.right.label),
         child: const Text(
-          'ปวดท้องแบบเกร็ง',
+          'ใช่',
           style: TextStyle(fontSize: 20),
         ),
       ),
     );
   }
 
-  Container med11Button() {
+// ปวดหัวทั้งซ้ายและขวา
+  Container NoButton() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 0.25),
       width: 250,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/level'),
+        onPressed: () => Navigator.pushNamed(context, '/'+medNode.left.label),
         child: const Text(
-          'ปวดท้องแบบแสบ',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    );
-  }
-
-// ปวดท้อง
-  Container med12Button() {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 0.25),
-      width: 250,
-      height: 50,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/level'),
-        child: const Text(
-          'ปวดแน่นท้อง',
+          'ไม่ใช่',
           style: TextStyle(fontSize: 20),
         ),
       ),

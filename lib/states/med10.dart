@@ -4,15 +4,15 @@ import 'package:predoc1/utility/decision_tree.dart';
 
 // เจ็บหน้าอก
 
-class Med5 extends StatefulWidget {
-  const Med5({Key? key}) : super(key: key);
+class Med10 extends StatefulWidget {
+  const Med10({Key? key}) : super(key: key);
 
   @override
-  _Med5State createState() => _Med5State();
+  _Med10State createState() => _Med10State();
 }
 
-class _Med5State extends State<Med5> {
-  var medNode = med5;
+class _Med10State extends State<Med10> {
+  var medNode = med10a;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +39,7 @@ class _Med5State extends State<Med5> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            'คุณมีอาการ'+'เจ็บหน้าอก'+'หรือไม่?',
+            'คุณมีอาการ'+'ปวดท้องแบบเกร็ง'+'หรือไม่?',
             style: MyConstant().h2Style(),
           ),
           YesButton(),
