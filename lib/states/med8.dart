@@ -2,17 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/decision_tree.dart';
 
+// ชา
+
 class Med8 extends StatefulWidget {
-  const Med8({ Key? key }) : super(key: key);
+  const Med8({Key? key}) : super(key: key);
 
   @override
   _Med8State createState() => _Med8State();
 }
 
 class _Med8State extends State<Med8> {
+  var medNode = med8;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: GestureDetector(
+    return Scaffold(
+      body: GestureDetector(
         onTap: () => FocusScope.of(context).requestFocus(FocusScopeNode()),
         behavior: HitTestBehavior.opaque,
         child: SafeArea(
@@ -26,15 +30,20 @@ class _Med8State extends State<Med8> {
           ),
         ),
       ),
-      
     );
   }
+
   Widget content() {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-         Text('คุณมีอาการชาบริเวณใด ?',style: MyConstant().h2Style(),),
+          Text(
+            'คุณมีอาการ'+'ชา'+'หรือไม่?',
+            style: MyConstant().h2Style(),
+          ),
+          YesButton(),
+          NoButton(),
         ],
       ),
     );
@@ -46,120 +55,42 @@ class _Med8State extends State<Med8> {
         Icons.navigate_before,
         size: 36.0,
       ),
-      onPressed: () => Navigator.pushNamed(context, '/diagnose'),
+      onPressed: () =>
+          Navigator.pushNamed(context, '/select'),
     );
   }
-// ชา
-  Container med8Button() {
+
+// ปวดหัวครึ่งซีก
+  Container YesButton() {
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 48),
+      width: 250,
+      height: 50,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
+        onPressed: () => Navigator.pushNamed(context, '/'+medNode.left.label),
+        child: const Text(
+          'ใช่',
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
+    );
+  }
+
+// ปวดหัวทั้งซ้ายและขวา
+  Container NoButton() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 0.25),
       width: 250,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/'),
+        onPressed: () => Navigator.pushNamed(context, '/'+medNode.left.label),
         child: const Text(
-          'ชา',
+          'ไม่ใช่',
           style: TextStyle(fontSize: 20),
         ),
       ),
     );
   }
-// ชามือ
-  Container med84Button() {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 0.25),
-      width: 250,
-      height: 50,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/'),
-        child: const Text(
-          'ชามือ',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    );
-  }
-// ชาเท้า
-  Container med85Button() {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 0.25),
-      width: 250,
-      height: 50,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/'),
-        child: const Text(
-          'ชาเท้า',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    );
-  }
-// ชาริมฝีปาก
-  Container med86Button() {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 0.25),
-      width: 250,
-      height: 50,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/'),
-        child: const Text(
-          'ชาริมฝีปาก',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    );
-  }
-// ชารอบปาก
-  Container med87Button() {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 0.25),
-      width: 250,
-      height: 50,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/'),
-        child: const Text(
-          'ชารอบปาก',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    );
-  }
-// ชาลิ้น
-  Container med88Button() {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 0.25),
-      width: 250,
-      height: 50,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/'),
-        child: const Text(
-          'ชาลิ้น',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    );
-  }
-// ชาคอ
-  Container med89Button() {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 0.25),
-      width: 250,
-      height: 50,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/'),
-        child: const Text(
-          'ชาคอ',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    );
-  }
-  
 }
