@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/decision_tree.dart';
 
-// เจ็บหน้าอก
+// คันตามผิวหนัง
 
-class Med10 extends StatefulWidget {
-  const Med10({Key? key}) : super(key: key);
+class Med50 extends StatefulWidget {
+  const Med50({Key? key}) : super(key: key);
 
   @override
-  _Med10State createState() => _Med10State();
+  _Med50State createState() => _Med50State();
 }
 
-class _Med10State extends State<Med10> {
-  var medNode = med10a;
+class _Med50State extends State<Med50> {
+  var medNode = med50;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +39,7 @@ class _Med10State extends State<Med10> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            'คุณมีอาการ'+'ปวดท้องแบบเกร็ง'+'หรือไม่?',
+            'คุณมีอาการ'+'คันตามผิวหนัง'+'หรือไม่?',
             style: MyConstant().h2Style(),
           ),
           YesButton(),

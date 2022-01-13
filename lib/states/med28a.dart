@@ -56,7 +56,7 @@ class _Med28aState extends State<Med28a> {
         size: 36.0,
       ),
       onPressed: () =>
-          Navigator.pushNamed(context, '/diagnose'),
+          Navigator.pushNamed(context, '/select'),
     );
   }
 
