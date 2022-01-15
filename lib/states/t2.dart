@@ -34,6 +34,8 @@ class _T2State extends State<T2> {
           symptoms3Text(),
           procedures1Text(),
           procedures2Text(),
+          findhospital1(),
+          findhospital2(),
           successButton(),
         ],
       ),
@@ -73,6 +75,34 @@ class _T2State extends State<T2> {
     return Text(
       'ควรไปพบแพทย์ที่สถานพยาบาล',
       style: MyConstant().h2Style(),
+    );
+  }
+
+  Row findhospital1() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        TextButton(
+          onPressed: () => Navigator.pushNamed(context, '/'),
+          child: const Text(
+            'โรงพยาบาลมหาวิทยาลัยนเรศวร',
+          ),
+        ),
+      ],
+    );
+  }
+
+  Row findhospital2() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        TextButton(
+          onPressed: () => Navigator.pushNamed(context, '/'),
+          child: const Text(
+            'โรงพยาบาลสมเด็จพระยุพราชนครไทย จังหวัดพิษณุโลก',
+          ),
+        ),
+      ],
     );
   }
 

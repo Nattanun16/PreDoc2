@@ -1,6 +1,7 @@
-  import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/decision_tree.dart';
+import 'package:predoc1/widgets/show_text.dart';
 
 class T45 extends StatefulWidget {
   const T45({Key? key}) : super(key: key);
@@ -19,7 +20,9 @@ class _T45State extends State<T45> {
         behavior: HitTestBehavior.opaque,
         child: SafeArea(
           child: SingleChildScrollView(
-            child: Container(margin: const EdgeInsets.symmetric(vertical: 150),child: content()),
+            child: Container(
+                margin: const EdgeInsets.symmetric(vertical: 150),
+                child: content()),
           ),
         ),
       ),
@@ -28,12 +31,16 @@ class _T45State extends State<T45> {
 
   Widget content() {
     return Center(
-      child: Column(mainAxisSize: MainAxisSize.min,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           symptoms1Text(),
           symptoms2Text(),
           procedures1Text(),
           procedures2Text(),
+          findhospital1(),
+          findhospital2(),
+          findhospital3(),
           successButton(),
         ],
       ),
@@ -45,14 +52,14 @@ class _T45State extends State<T45> {
       'โรคที่คุณมีโอกาสจะเป็น :',
       style: MyConstant().h2Style(),
     );
-  } 
+  }
 
   Widget symptoms2Text() {
     return Text(
       'ซิกัวเทอร่า',
       style: MyConstant().h2Style(),
     );
-  } 
+  }
 
   /*Widget symptoms3Text() {
     return Text(
@@ -72,6 +79,44 @@ class _T45State extends State<T45> {
     return Text(
       'ควรไปพบแพทย์ที่สถานพยาบาล',
       style: MyConstant().h2Style(),
+    );
+  }
+
+  Row findhospital1() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        TextButton(
+          onPressed: () => Navigator.pushNamed(context, '/'),
+          child: const Text(
+            'โรงพยาบาลค่ายสมเด็จพระนเรศวรมหาราช',
+          ),
+        ),
+      ],
+    );
+  }
+
+  Row findhospital2() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        TextButton(
+          onPressed: () => Navigator.pushNamed(context, '/'),
+          child: const Text('โรงพยาบาลจิตเวชพิษณุโลก'),
+        ),
+      ],
+    );
+  }
+
+  Row findhospital3() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        TextButton(
+          onPressed: () => Navigator.pushNamed(context, '/'),
+          child: const Text('โรงพยาบาลพุทธชินราช พิษณุโลก'),
+        ),
+      ],
     );
   }
 
