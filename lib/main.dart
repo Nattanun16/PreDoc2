@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:predoc1/states/authen.dart';
 import 'package:predoc1/states/create_account.dart';
 import 'package:predoc1/states/disease.dart';
+import 'package:predoc1/states/get_id.dart';
 import 'package:predoc1/states/med10a.dart';
 import 'package:predoc1/states/med10b.dart';
 import 'package:predoc1/states/med10c.dart';
@@ -43,10 +44,12 @@ import 'package:predoc1/states/med59.dart';
 import 'package:predoc1/states/med6.dart';
 import 'package:predoc1/states/med62.dart';
 import 'package:predoc1/states/med69.dart';
+import 'package:predoc1/states/med70.dart';
 import 'package:predoc1/states/med8.dart';
 import 'package:predoc1/states/med80.dart';
 import 'package:predoc1/states/med82.dart';
 import 'package:predoc1/states/med91.dart';
+import 'package:predoc1/states/med93.dart';
 import 'package:predoc1/states/med95.dart';
 import 'package:predoc1/states/nearby_hospital.dart';
 import 'package:predoc1/states/select.dart';
@@ -108,6 +111,7 @@ import 'package:predoc1/states/t9.dart';
 
 Map<String, WidgetBuilder> map = {
   '/authen': (BuildContext context) => const Authen(),
+  '/getid': (BuildContext context) => const GetID(),
   '/createAccount': (BuildContext context) => const CreateAccount(),
   '/serviceUser': (BuildContext context) => const ServiceUser(),
   '/serviceHospital': (BuildContext context) => const ServiceHospital(),
@@ -153,10 +157,12 @@ Map<String, WidgetBuilder> map = {
   '/med59': (BuildContext context) => const Med59(),
   '/med62': (BuildContext context) => const Med62(),
   '/med69': (BuildContext context) => const Med69(),
+  '/med70': (BuildContext context) => const Med70(),
   '/med80': (BuildContext context) => const Med80(),
-  '/med87': (BuildContext context) => const Med82(),
-  '/med82': (BuildContext context) => const Med87(),
+  '/med82': (BuildContext context) => const Med82(),
+  '/med87': (BuildContext context) => const Med87(),
   '/med91': (BuildContext context) => const Med91(),
+  '/med93': (BuildContext context) => const Med93(),
   '/med95': (BuildContext context) => const Med95(),
   '/t1': (BuildContext context) => const T1(),
   '/t2': (BuildContext context) => const T2(),

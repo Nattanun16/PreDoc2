@@ -68,7 +68,7 @@ class _Med8State extends State<Med8> {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/'+medNode.left.label),
+        onPressed: () => Navigator.pushNamed(context, '/'+medNode.right.label),
         child: const Text(
           'ใช่',
           style: TextStyle(fontSize: 20),

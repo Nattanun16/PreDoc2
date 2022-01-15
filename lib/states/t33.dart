@@ -30,32 +30,13 @@ class _T33State extends State<T33> {
     return Center(
       child: Column(mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          disease1Text(),
-          disease2Text(),
           symptoms1Text(),
-          symptoms2Text(),
           symptoms3Text(),
-          symptoms4Text(),
-          symptoms5Text(),
           procedures1Text(),
           procedures2Text(),
           successButton(),
         ],
       ),
-    );
-  }
-
-  Widget disease1Text() {
-    return Text(
-      'ปวดท้อง',
-      style: MyConstant().h2Style(),
-    );
-  }
-
-  Widget disease2Text() {
-    return Text(
-      'ปวดท้องแบบเกร็ง',
-      style: MyConstant().h2Style(),
     );
   }
 
@@ -66,30 +47,16 @@ class _T33State extends State<T33> {
     );
   }
 
-  Widget symptoms2Text() {
+ /* Widget symptoms2Text() {
     return Text(
       medNode.get_id().toString(),
       style: MyConstant().h2Style(),
     );
-  }
+  }*/
 
   Widget symptoms3Text() {
     return Text(
-      'อาหารเป็นพิษ',
-      style: MyConstant().h2Style(),
-    );
-  }
-
-  Widget symptoms4Text() {
-    return Text(
-      'ไข้เลือดออก',
-      style: MyConstant().h2Style(),
-    );
-  }
-
-  Widget symptoms5Text() {
-    return Text(
-      'ไทฟอยด์',
+      'ตับแข็ง',
       style: MyConstant().h2Style(),
     );
   }
