@@ -57,6 +57,15 @@ class _Med6State extends State<Med6> {
       ),
       onPressed: () =>
           Navigator.pushNamed(context, '/select'),
+<<<<<<< HEAD
+    );
+  }
+
+// ปวดหัวครึ่งซีก
+  Container YesButton() {
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 48),
+=======
     );
   }
 
@@ -81,6 +90,31 @@ class _Med6State extends State<Med6> {
   Container NoButton() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 0.25),
+>>>>>>> 5dfe16f9e685f5b33ab5d08071965d2bd974d08a
+      width: 250,
+      height: 50,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
+<<<<<<< HEAD
+        onPressed: () => Navigator.pushNamed(context, '/'+medNode.right.label),
+        child: const Text(
+          'ใช่',
+=======
+        onPressed: () => Navigator.pushNamed(context, '/'+medNode.left.label),
+        child: const Text(
+          'ไม่ใช่',
+>>>>>>> 5dfe16f9e685f5b33ab5d08071965d2bd974d08a
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
+    );
+  }
+<<<<<<< HEAD
+
+// ปวดหัวทั้งซ้ายและขวา
+  Container NoButton() {
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 0.25),
       width: 250,
       height: 50,
       child: ElevatedButton(
@@ -94,3 +128,6 @@ class _Med6State extends State<Med6> {
     );
   }
 }
+=======
+}
+>>>>>>> 5dfe16f9e685f5b33ab5d08071965d2bd974d08a
