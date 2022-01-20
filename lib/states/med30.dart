@@ -55,7 +55,7 @@ class _Med30State extends State<Med30> {
         Icons.navigate_before,
         size: 36.0,
       ),
-      onPressed: () => Navigator.pushNamed(context, '/diagnose'),
+      onPressed: () => Navigator.pushNamed(context, '/select'),
     );
   }
 

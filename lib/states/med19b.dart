@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/decision_tree.dart';
 
-// หัวใจเต้นเร็ว
+// เวียนศีรษะ
 
-class Med28 extends StatefulWidget {
-  const Med28({Key? key}) : super(key: key);
+class Med19b extends StatefulWidget {
+  const Med19b({Key? key}) : super(key: key);
 
   @override
-  _Med28State createState() => _Med28State();
+  _Med19bState createState() => _Med19bState();
 }
 
-class _Med28State extends State<Med28> {
-  var medNode = med28a;
+class _Med19bState extends State<Med19b> {
+  var medNode = med19b;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +39,7 @@ class _Med28State extends State<Med28> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            'คุณมีอาการ'+'หัวใจเต้นเร็ว'+'หรือไม่?',
+            'คุณมีอาการ'+'เวียนศีรษะ'+'หรือไม่?',
             style: MyConstant().h2Style(),
           ),
           YesButton(),
@@ -56,11 +56,11 @@ class _Med28State extends State<Med28> {
         size: 36.0,
       ),
       onPressed: () =>
-          Navigator.pushNamed(context, '/diagnose'),
+          Navigator.pushNamed(context, '/select'),
     );
   }
 
-
+// ปวดหัวครึ่งซีก
   Container YesButton() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 48),

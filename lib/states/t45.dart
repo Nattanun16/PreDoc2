@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/decision_tree.dart';
 
-class T45 extends StatefulWidget {
-  const T45({Key? key}) : super(key: key);
+class T2 extends StatefulWidget {
+  const T2({Key? key}) : super(key: key);
 
   @override
-  _T45State createState() => _T45State();
+  _T2State createState() => _T2State();
 }
 
-class _T45State extends State<T45> {
-  var medNode = t45;
+class _T2State extends State<T2> {
+  var medNode = t2;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +19,9 @@ class _T45State extends State<T45> {
         behavior: HitTestBehavior.opaque,
         child: SafeArea(
           child: SingleChildScrollView(
-            child: Container(margin: const EdgeInsets.symmetric(vertical: 150),child: content()),
+            child: Container(
+                margin: const EdgeInsets.symmetric(vertical: 150),
+                child: content()),
           ),
         ),
       ),
@@ -28,34 +30,18 @@ class _T45State extends State<T45> {
 
   Widget content() {
     return Center(
-      child: Column(mainAxisAlignment: MainAxisAlignment.center,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          disease1Text(),
-          disease2Text(),
           symptoms1Text(),
-          symptoms2Text(),
           symptoms3Text(),
-          symptoms4Text(),
-          symptoms5Text(),
           procedures1Text(),
           procedures2Text(),
+          findhospital1(),
+          findhospital2(),
           successButton(),
         ],
       ),
-    );
-  }
-
-  Widget disease1Text() {
-    return Text(
-      'ปวดท้อง',
-      style: MyConstant().h2Style(),
-    );
-  }
-
-  Widget disease2Text() {
-    return Text(
-      'ปวดท้องแบบเกร็ง',
-      style: MyConstant().h2Style(),
     );
   }
 
@@ -66,30 +52,16 @@ class _T45State extends State<T45> {
     );
   }
 
-  Widget symptoms2Text() {
+  /* Widget symptoms2Text() {
     return Text(
       medNode.get_id().toString(),
       style: MyConstant().h2Style(),
     );
-  }
+  }*/
 
   Widget symptoms3Text() {
     return Text(
-      'อาหารเป็นพิษ',
-      style: MyConstant().h2Style(),
-    );
-  }
-
-  Widget symptoms4Text() {
-    return Text(
-      'ไข้เลือดออก',
-      style: MyConstant().h2Style(),
-    );
-  }
-
-  Widget symptoms5Text() {
-    return Text(
-      'ไทฟอยด์',
+      'โรคกระดูกพรุน',
       style: MyConstant().h2Style(),
     );
   }
@@ -108,6 +80,34 @@ class _T45State extends State<T45> {
     );
   }
 
+  Row findhospital1() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        TextButton(
+          onPressed: () => Navigator.pushNamed(context, '/'),
+          child: const Text(
+            'โรงพยาบาลมหาวิทยาลัยนเรศวร',
+          ),
+        ),
+      ],
+    );
+  }
+
+  Row findhospital2() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        TextButton(
+          onPressed: () => Navigator.pushNamed(context, '/'),
+          child: const Text(
+            'โรงพยาบาลสมเด็จพระยุพราชนครไทย จังหวัดพิษณุโลก',
+          ),
+        ),
+      ],
+    );
+  }
+
   Container successButton() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 16),
@@ -115,7 +115,7 @@ class _T45State extends State<T45> {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/nearbyHospital'),
+        onPressed: () => Navigator.pushNamed(context, '/select'),
         child: const Text(
           'เสร็จสิ้น',
           style: TextStyle(fontSize: 20),

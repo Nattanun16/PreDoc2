@@ -44,6 +44,7 @@ dependencies:
   google_place: ^0.4.3
   flutter_google_places: ^0.3.0
   location: ^4.3.0
+  flutter_dotenv: ^5.0.2
 
 
 dev_dependencies:

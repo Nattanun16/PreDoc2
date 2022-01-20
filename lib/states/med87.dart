@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/decision_tree.dart';
 
+
 // ชารอบปาก
 
 class Med87 extends StatefulWidget {
@@ -56,7 +57,7 @@ class _Med87State extends State<Med87> {
         size: 36.0,
       ),
       onPressed: () =>
-          Navigator.pushNamed(context, '/diagnose'),
+          Navigator.pushNamed(context, '/select'),
     );
   }
 

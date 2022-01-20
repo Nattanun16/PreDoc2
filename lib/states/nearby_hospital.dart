@@ -41,7 +41,7 @@ class _NearbyHospitalState extends State<NearbyHospital> {
           child: Column(
             children: [
               newMap(),
-              findHospitalbutton(),
+              //findHospitalbutton(),
             ],
           ),
         ),
@@ -57,7 +57,7 @@ class _NearbyHospitalState extends State<NearbyHospital> {
     findPostion();
   }
 
-  Container findHospitalbutton() {
+  /*Container findHospitalbutton() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 16),
       width: 250,
@@ -71,7 +71,7 @@ class _NearbyHospitalState extends State<NearbyHospital> {
         ),
       ),
     );
-  }
+  }*/
 
   Future<void> findHospital() async {
     Position? position = await findPostion();
@@ -126,18 +126,12 @@ class _NearbyHospitalState extends State<NearbyHospital> {
               onMapCreated: (controller) {},
               markers: <Marker>{
                 Marker(
-                  markerId: MarkerId('id'),
+                  markerId: const MarkerId('id'),
                   position: LatLng(lat!, lng!),
                   infoWindow: InfoWindow(
                       title: 'คุณอยู่ที่นี่',
                       snippet: 'lat = $lat, lng = $lng'),
                 ),
-                Marker(
-                  markerId: const MarkerId('id'),
-                  position: LatLng(lat!, lng!),
-                  infoWindow: InfoWindow(
-                      title: ';-;', snippet: 'lat = $lat, lng = $lng'),
-                )
               },
             ),
     );

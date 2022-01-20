@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/decision_tree.dart';
 
+// กล้ามเนื้ออ่อนแรง
+
 class Med6 extends StatefulWidget {
   const Med6({Key? key}) : super(key: key);
 
@@ -10,6 +12,7 @@ class Med6 extends StatefulWidget {
 }
 
 class _Med6State extends State<Med6> {
+  var medNode = med6;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,13 +39,11 @@ class _Med6State extends State<Med6> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            'คุณมีอาการกล้ามเนื้ออ่อนแรงตรงไหน?',
+            'คุณมีอาการ'+'กล้ามเนื้ออ่อนแรง'+'หรือไม่?',
             style: MyConstant().h2Style(),
           ),
-          righthandButton(),
-          lefthandButton(),
-          rightlegButton(),
-          leftlegButton(),
+          YesButton(),
+          NoButton(),
         ],
       ),
     );
@@ -54,71 +55,39 @@ class _Med6State extends State<Med6> {
         Icons.navigate_before,
         size: 36.0,
       ),
-      onPressed: () => Navigator.pushNamed(context, '/diagnose'+ med10b.left.label),
+      onPressed: () =>
+          Navigator.pushNamed(context, '/select'),
     );
   }
 
-// ขาซ้าย
-  Container leftlegButton() {
+// ปวดหัวครึ่งซีก
+  Container YesButton() {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 16),
+      margin: const EdgeInsets.symmetric(vertical: 48),
       width: 250,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/level'),
+        onPressed: () => Navigator.pushNamed(context, '/'+medNode.right.label),
         child: const Text(
-          'ขาซ้าย',
+          'ใช่',
           style: TextStyle(fontSize: 20),
         ),
       ),
     );
   }
 
-// ขาขวา
-  Container rightlegButton() {
+// ปวดหัวทั้งซ้ายและขวา
+  Container NoButton() {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 16),
+      margin: const EdgeInsets.symmetric(vertical: 0.25),
       width: 250,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/level'),
+        onPressed: () => Navigator.pushNamed(context, '/'+medNode.left.label),
         child: const Text(
-          'ขาขวา',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    );
-  }
-
-  Container lefthandButton() {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 16),
-      width: 250,
-      height: 50,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/level'),
-        child: const Text(
-          'มือซ้าย',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    );
-  }
-
-// มือขวา
-  Container righthandButton() {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 16),
-      width: 250,
-      height: 50,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/level'),
-        child: const Text(
-          'มือขวา',
+          'ไม่ใช่',
           style: TextStyle(fontSize: 20),
         ),
       ),
