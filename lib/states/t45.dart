@@ -29,35 +29,47 @@ class _T45State extends State<T45> {
     );
   }
 
+ /* Widget show() {
+    return Align(
+      alignment: Alignment.centerLeft,
+      child: content(),
+    );
+  }*/
+
   Widget content() {
-    return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          symptoms1Text(),
-          symptoms2Text(),
-          procedures1Text(),
-          procedures2Text(),
-          findhospital1(),
-          findhospital2(),
-          findhospital3(),
-          successButton(),
-        ],
-      ),
+    return Column(
+      children: <Widget>[
+        symptoms1Text(),
+        symptoms2Text(),
+        procedures1Text(),
+        procedures2Text(),
+        findhospital1(),
+        findhospital2(),
+        findhospital3(),
+        Align(alignment: Alignment.bottomCenter,child: successButton()),
+      ],
     );
   }
 
   Widget symptoms1Text() {
-    return Text(
-      'โรคที่คุณมีโอกาสจะเป็น :',
-      style: MyConstant().h2Style(),
+    return Container(margin: EdgeInsets.symmetric(vertical: 10),
+      child: Align(alignment: Alignment.centerLeft,
+        child: Text(
+          'โรคที่คุณมีโอกาสจะเป็น :',
+          style: MyConstant().h2Style(),
+        ),
+      ),
     );
   }
 
   Widget symptoms2Text() {
-    return Text(
-      'ซิกัวเทอร่า',
-      style: MyConstant().h2Style(),
+    return Container(margin: EdgeInsets.symmetric(vertical: 10),
+      child: Align(alignment: Alignment.centerLeft,
+        child: Text(
+          'ซิกัวเทอร่า',
+          style: MyConstant().h2Style(),
+        ),
+      ),
     );
   }
 
@@ -69,22 +81,30 @@ class _T45State extends State<T45> {
   }*/
 
   Widget procedures1Text() {
-    return Text(
-      'วิธีการรักษาเบื้องต้น',
-      style: MyConstant().h2Style(),
+    return Container(margin: EdgeInsets.symmetric(vertical: 10),
+      child: Align(alignment: Alignment.centerLeft,
+        child: Text(
+          'วิธีการรักษาเบื้องต้น',
+          style: MyConstant().h2Style(),
+        ),
+      ),
     );
   }
 
   Widget procedures2Text() {
-    return Text(
-      'ควรไปพบแพทย์ที่สถานพยาบาล',
-      style: MyConstant().h2Style(),
+    return Container(margin: EdgeInsets.symmetric(vertical: 10),
+      child: Align(alignment: Alignment.centerLeft,
+        child: Text(
+          'ควรไปพบแพทย์ที่สถานพยาบาล',
+          style: MyConstant().h2Style(),
+        ),
+      ),
     );
   }
 
   Row findhospital1() {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         TextButton(
           onPressed: () => Navigator.pushNamed(context, '/'),
@@ -98,7 +118,7 @@ class _T45State extends State<T45> {
 
   Row findhospital2() {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         TextButton(
           onPressed: () => Navigator.pushNamed(context, '/'),
@@ -110,7 +130,7 @@ class _T45State extends State<T45> {
 
   Row findhospital3() {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         TextButton(
           onPressed: () => Navigator.pushNamed(context, '/'),

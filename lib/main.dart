@@ -3,6 +3,7 @@ import 'package:predoc1/states/authen.dart';
 import 'package:predoc1/states/create_account.dart';
 import 'package:predoc1/states/disease.dart';
 import 'package:predoc1/states/get_id.dart';
+import 'package:predoc1/states/hospital1.dart';
 import 'package:predoc1/states/med10a.dart';
 import 'package:predoc1/states/med10b.dart';
 import 'package:predoc1/states/med10c.dart';
@@ -234,6 +235,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: map,
       initialRoute: firstPage,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primaryColor: Colors.white),
+      home: Hospital1(),
     );
   }
 }
