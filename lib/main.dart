@@ -219,9 +219,10 @@ Map<String, WidgetBuilder> map = {
   '/select': (BuildContext context) => const Select(),
   '/nearbyHospital': (BuildContext context) => const NearbyHospital(),
   '/disease': (BuildContext context) => const Disease(),
+  '/hospital1': (BuildContext context) => const Hospital1(),
 };
 
-String firstPage = '/authen';
+String firstPage = '/hospital1';
 
 void main() {
   runApp(const MyApp());
