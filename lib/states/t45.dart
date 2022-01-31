@@ -107,7 +107,7 @@ class _T45State extends State<T45> {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         TextButton(
-          onPressed: () => Navigator.pushNamed(context, '/'),
+          onPressed: () => Navigator.pushNamed(context, '/hospital2'),
           child: const Text(
             'โรงพยาบาลค่ายสมเด็จพระนเรศวรมหาราช',
           ),

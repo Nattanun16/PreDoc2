@@ -4,6 +4,7 @@ import 'package:predoc1/states/create_account.dart';
 import 'package:predoc1/states/disease.dart';
 import 'package:predoc1/states/get_id.dart';
 import 'package:predoc1/states/hospital1.dart';
+import 'package:predoc1/states/hospital2.dart';
 import 'package:predoc1/states/med10a.dart';
 import 'package:predoc1/states/med10b.dart';
 import 'package:predoc1/states/med10c.dart';
@@ -219,10 +220,11 @@ Map<String, WidgetBuilder> map = {
   '/select': (BuildContext context) => const Select(),
   '/nearbyHospital': (BuildContext context) => const NearbyHospital(),
   '/disease': (BuildContext context) => const Disease(),
-  '/hospital1': (BuildContext context) => const Hospital1(),
+  //'/hospital1': (BuildContext context) => const Hospital1(),
+  '/hospital2': (BuildContext context) => const Hospital2(),
 };
 
-String firstPage = '/hospital1';
+String firstPage = '/hospital2';
 
 void main() {
   runApp(const MyApp());
@@ -236,9 +238,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: map,
       initialRoute: firstPage,
-      debugShowCheckedModeBanner: false,
+     debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Colors.white),
-      home: Hospital1(),
+      home:  Hospital2(),
     );
   }
 }
