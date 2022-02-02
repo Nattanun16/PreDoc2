@@ -34,7 +34,7 @@ class MapUserBadge extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(50),
               image: DecorationImage(
-                image: AssetImage('images/marker'),
+                image: AssetImage('images/markerr.png'),
                 fit: BoxFit.cover,
               ),
               border: Border.all(

@@ -6,7 +6,7 @@ import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:predoc1/states/mapbuttompill.dart';
 import 'package:predoc1/states/mapuserbadge.dart';
-import 'package:predoc1/utility/my_constant.dart';
+
 
 LatLng SOURCE_LOCATION = LatLng(16.866437, 100.670591);
 LatLng DEST_LOCATION = LatLng(16.834065, 100.254326);
@@ -29,7 +29,7 @@ class _Hospital2State extends State<Hospital2> {
 
   Set<Polyline> _polylines = Set<Polyline>();
   List<LatLng> polylineCoordinates = [];
-  late PolylinePoints polylinePoints;
+   late PolylinePoints polylinePoints;
 
   late LatLng currentLocation;
   late LatLng destinationLocation;
@@ -39,7 +39,8 @@ class _Hospital2State extends State<Hospital2> {
     super.initState();
 
     polylinePoints = PolylinePoints();
-
+    
+    
     // set up initial locations
     this.setInitialLocation();
     // set up the marker icons
@@ -104,7 +105,8 @@ class _Hospital2State extends State<Hospital2> {
                 _controller.complete(controller);
 
                 showPinsOnMap();
-                setPolylines();
+                 showsetPolylines();
+                 
               },
             ),
           ),
@@ -153,7 +155,15 @@ class _Hospital2State extends State<Hospital2> {
     );
   }
 
-  void setPolylines() async {
+  void showsetPolylines() async {
+    setState(() {
+        _polylines.add(Polyline(
+          width: 10,
+          polylineId: PolylineId('polyLine'),
+          color: Color(0xFF08A5CB),
+          points: polylineCoordinates,
+        ));
+      });
     PolylineResult result = await polylinePoints.getRouteBetweenCoordinates(
       "API_KEY",
       PointLatLng(
@@ -174,17 +184,7 @@ class _Hospital2State extends State<Hospital2> {
           );
         },
       );
-
-      setState(() {
-        _polylines.add(
-          Polyline(
-            width: 10,
-            polylineId: PolylineId('polyLine'),
-            color: Color(0xFF08A5CB),
-            points: polylineCoordinates,
-          ),
-        );
-      });
+      
     }
   }
 }
