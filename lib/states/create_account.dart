@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:predoc1/models/user_model.dart';
 import 'package:predoc1/utility/my_constant.dart';
@@ -46,6 +47,7 @@ class _CreateAccountState extends State<CreateAccount> {
             color: MyConstant.dark,
           ),
           label: ShowText(data: 'Name :'),
+          labelStyle: GoogleFonts.creteRound(),
           border: OutlineInputBorder(),
         ),
       ),
@@ -72,6 +74,7 @@ class _CreateAccountState extends State<CreateAccount> {
             color: MyConstant.dark,
           ),
           label: ShowText(data: 'Email :'),
+          labelStyle: GoogleFonts.creteRound(),
           border: OutlineInputBorder(),
         ),
       ),
@@ -117,6 +120,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   ),
           ),
           label: const ShowText(data: 'Passowrd :'),
+          labelStyle: GoogleFonts.creteRound(),
           border: const OutlineInputBorder(),
         ),
       ),
@@ -142,6 +146,7 @@ class _CreateAccountState extends State<CreateAccount> {
             color: MyConstant.dark,
           ),
           label: ShowText(data: 'Age :'),
+          labelStyle: GoogleFonts.creteRound(),
           border: OutlineInputBorder(),
         ),
       ),
@@ -186,10 +191,13 @@ class _CreateAccountState extends State<CreateAccount> {
           IconButton(
             onPressed: () => processRegister(),
             icon: Icon(Icons.cloud_upload_outlined),
+            color: Colors.green.shade800,
           ),
         ],
-        backgroundColor: MyConstant.primary,
+        backgroundColor: Colors.yellow.shade50,
         title: Text('Create new Account'),
+        titleTextStyle: MyConstant().h2Style(),
+        leading: BackButton(color: Colors.black),
       ),
       body: GestureDetector(
         onTap: () => FocusScope.of(context).requestFocus(
@@ -202,7 +210,9 @@ class _CreateAccountState extends State<CreateAccount> {
             child: Column(
               children: [
                 newName(),
-                newTitle('Type User :'),
+                newTitle(
+                  'Type User :',
+                ),
                 radioUser(),
                 radioHospital(),
                 newEmail(),
@@ -250,9 +260,13 @@ class _CreateAccountState extends State<CreateAccount> {
       child: ElevatedButton(
         onPressed: () {
           processRegister();
-          onPressed: () => Navigator.pushNamed(context, '/authen');
+          onPressed:
+          () => Navigator.pushNamed(context, '/authen');
         },
-        child: Text('Create New Account'),
+        child: Text(
+          'Create New Account',
+          style: GoogleFonts.pridi(fontSize: 16),
+        ),
       ),
     );
   }
@@ -304,9 +318,13 @@ class _CreateAccountState extends State<CreateAccount> {
 
   RadioListTile<String> radioUser() {
     return RadioListTile(
-      subtitle: ShowText(data: 'ผู้ใช้งาน'),
+      subtitle: ShowText(
+        data: 'ผู้ใช้งาน',
+        textStyle: GoogleFonts.kanit(color: Colors.green.shade800),
+      ),
       title: ShowText(
         data: 'User',
+        textStyle: GoogleFonts.creteRound(color: Colors.green.shade800),
       ),
       value: 'user',
       groupValue: typeUser,
@@ -320,9 +338,13 @@ class _CreateAccountState extends State<CreateAccount> {
 
   RadioListTile<String> radioHospital() {
     return RadioListTile(
-      subtitle: ShowText(data: 'โรงพยาบาล'),
+      subtitle: ShowText(
+        data: 'โรงพยาบาล',
+        textStyle: GoogleFonts.kanit(color: Colors.green.shade800),
+      ),
       title: ShowText(
         data: 'Hospital',
+        textStyle: GoogleFonts.creteRound(color: Colors.green.shade800),
       ),
       value: 'hospital',
       groupValue: typeHospital,

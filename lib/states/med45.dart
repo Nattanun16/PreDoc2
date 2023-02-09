@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/decision_tree.dart';
 
@@ -40,7 +41,7 @@ class _Med45State extends State<Med45> {
         children: <Widget>[
           Text(
             'คุณมีอาการ'+'ถ่ายเป็นน้ำ'+'หรือไม่?',
-            style: MyConstant().h2Style(),
+            style: GoogleFonts.kanit(color: Colors.green.shade800,fontSize: 20),
           ),
           YesButton(),
           NoButton(),

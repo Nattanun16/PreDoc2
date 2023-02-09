@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/widgets/show_image.dart';
 import 'package:predoc1/widgets/show_text.dart';
@@ -55,7 +56,7 @@ class _AuthenState extends State<Authen> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const ShowText(data: 'Non Account ?'),
+        const ShowText(data: 'No Account ?'),
         TextButton(
           onPressed: () => Navigator.pushNamed(context, '/createAccount'),
           child: const Text('Create Account'),
@@ -69,17 +70,21 @@ class _AuthenState extends State<Authen> {
       margin: EdgeInsets.symmetric(vertical: 16),
       width: 250,
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () {
-          if (formKey.currentState!.validate()) {
-            String user = userController.text;
-            String password = passwordController.text;
-            print('## user = $user, password = $password');
-            Navigator.pushNamed(context, '/select');
-          }
-        },
-        child: Text('Login'),
-      ),
+          style: ElevatedButton.styleFrom(primary: MyConstant.dark),
+          onPressed: () {
+            if (formKey.currentState!.validate()) {
+              String user = userController.text;
+              String password = passwordController.text;
+              print('## user = $user, password = $password');
+              Navigator.pushNamed(context, '/select');
+            }
+          },
+          child: Text(
+            'Login',
+            style: GoogleFonts.creteRound(
+              color: Colors.white,
+            ),
+          )),
     );
   }
 
@@ -107,6 +112,7 @@ class _AuthenState extends State<Authen> {
             color: MyConstant.dark,
           ),
           label: ShowText(data: 'User :'),
+          labelStyle: GoogleFonts.creteRound(color: Colors.green.shade800),
           border: OutlineInputBorder(),
         ),
       ),
@@ -152,6 +158,7 @@ class _AuthenState extends State<Authen> {
                   ),
           ),
           label: const ShowText(data: 'Password :'),
+          labelStyle: GoogleFonts.creteRound(color: Colors.green.shade800),
           border: const OutlineInputBorder(),
         ),
       ),
@@ -161,7 +168,10 @@ class _AuthenState extends State<Authen> {
   ShowText newAppName() {
     return ShowText(
       data: MyConstant.appName,
-      textStyle: MyConstant().h1style(),
+      textStyle: GoogleFonts.abhayaLibre(
+          color: Colors.green.shade800,
+          fontSize: 35,
+          fontWeight: FontWeight.bold),
     );
   }
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/decision_tree.dart';
 
@@ -46,7 +47,10 @@ class _T26State extends State<T26> {
   Widget symptoms1Text() {
     return Text(
       'โรคที่คุณมีโอกาสจะเป็น :',
-      style: MyConstant().h2Style(),
+      style: GoogleFonts.kanit(
+        color: Colors.green.shade800,
+        fontSize: 20,
+      ),
     );
   }
 
@@ -60,21 +64,30 @@ class _T26State extends State<T26> {
   Widget symptoms3Text() {
     return Text(
       'ลำไส้ใหญ่อักเสบเรื้อรัง',
-      style: MyConstant().h2Style(),
+      style: GoogleFonts.kanit(
+        color: Colors.red.shade800,
+        fontSize: 18,
+      ),
     );
   }
 
   Widget procedures1Text() {
     return Text(
       'วิธีการรักษาเบื้องต้น',
-      style: MyConstant().h2Style(),
+      style: GoogleFonts.kanit(
+        color: Colors.green.shade800,
+        fontSize: 20,
+      ),
     );
   }
 
   Widget procedures2Text() {
     return Text(
       'ควรไปพบแพทย์ที่สถานพยาบาล',
-      style: MyConstant().h2Style(),
+      style: GoogleFonts.kanit(
+        color: Colors.red.shade800,
+        fontSize: 18,
+      ),
     );
   }
 
@@ -113,7 +126,7 @@ class _T26State extends State<T26> {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/nearbyHospital'),
+        onPressed: () => Navigator.pushNamed(context, '/select'),
         child: const Text(
           'เสร็จสิ้น',
           style: TextStyle(fontSize: 20),

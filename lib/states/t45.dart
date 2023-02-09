@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/decision_tree.dart';
 import 'package:predoc1/widgets/show_text.dart';
@@ -56,7 +57,10 @@ class _T45State extends State<T45> {
       child: Align(alignment: Alignment.centerLeft,
         child: Text(
           'โรคที่คุณมีโอกาสจะเป็น :',
-          style: MyConstant().h2Style(),
+          style: GoogleFonts.kanit(
+        color: Colors.green.shade800,
+        fontSize: 20,
+      ),
         ),
       ),
     );
@@ -67,7 +71,10 @@ class _T45State extends State<T45> {
       child: Align(alignment: Alignment.centerLeft,
         child: Text(
           'ซิกัวเทอร่า',
-          style: MyConstant().h2Style(),
+          style: GoogleFonts.kanit(
+        color: Colors.red.shade800,
+        fontSize: 18,
+      ),
         ),
       ),
     );
@@ -85,7 +92,10 @@ class _T45State extends State<T45> {
       child: Align(alignment: Alignment.centerLeft,
         child: Text(
           'วิธีการรักษาเบื้องต้น',
-          style: MyConstant().h2Style(),
+          style: GoogleFonts.kanit(
+        color: Colors.green.shade800,
+        fontSize: 20,
+      ),
         ),
       ),
     );
@@ -96,7 +106,10 @@ class _T45State extends State<T45> {
       child: Align(alignment: Alignment.centerLeft,
         child: Text(
           'ควรไปพบแพทย์ที่สถานพยาบาล',
-          style: MyConstant().h2Style(),
+          style: GoogleFonts.kanit(
+        color: Colors.red.shade800,
+        fontSize: 18,
+      ),
         ),
       ),
     );
@@ -147,7 +160,7 @@ class _T45State extends State<T45> {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/nearbyHospital'),
+        onPressed: () => Navigator.pushNamed(context, '/select'),
         child: const Text(
           'เสร็จสิ้น',
           style: TextStyle(fontSize: 20),

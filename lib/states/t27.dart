@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/decision_tree.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class T27 extends StatefulWidget {
   const T27({Key? key}) : super(key: key);
@@ -45,7 +46,10 @@ class _T27State extends State<T27> {
   Widget symptoms1Text() {
     return Text(
       'โรคที่คุณมีโอกาสจะเป็น :',
-      style: MyConstant().h2Style(),
+      style: GoogleFonts.kanit(
+        color: Colors.green.shade800,
+        fontSize: 20,
+      ),
     );
   }
 
@@ -59,21 +63,30 @@ class _T27State extends State<T27> {
   Widget symptoms3Text() {
     return Text(
       'ไซนัสอักเสบ',
-      style: MyConstant().h2Style(),
+      style: GoogleFonts.kanit(
+        color: Colors.red.shade800,
+        fontSize: 18,
+      ),
     );
   }
 
   Widget procedures1Text() {
     return Text(
       'วิธีการรักษาเบื้องต้น',
-      style: MyConstant().h2Style(),
+      style: GoogleFonts.kanit(
+        color: Colors.green.shade800,
+        fontSize: 20,
+      ),
     );
   }
 
   Widget procedures2Text() {
     return Text(
       'ควรไปพบแพทย์ที่สถานพยาบาล',
-      style: MyConstant().h2Style(),
+      style: GoogleFonts.kanit(
+        color: Colors.red.shade800,
+        fontSize: 18,
+      ),
     );
   }
 
@@ -112,7 +125,7 @@ class _T27State extends State<T27> {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/nearbyHospital'),
+        onPressed: () => Navigator.pushNamed(context, '/select'),
         child: const Text(
           'เสร็จสิ้น',
           style: TextStyle(fontSize: 20),

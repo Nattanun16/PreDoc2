@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/decision_tree.dart';
 
@@ -39,8 +40,9 @@ class _Med69State extends State<Med69> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            'คุณมีอาการ'+'อุจจาระเป็นสีดำ'+'หรือไม่?',
-            style: MyConstant().h2Style(),
+            'คุณมีอาการ' + 'อุจจาระเป็นสีดำ' + 'หรือไม่?',
+            style:
+                GoogleFonts.kanit(color: Colors.green.shade800, fontSize: 20),
           ),
           YesButton(),
           NoButton(),
@@ -55,8 +57,7 @@ class _Med69State extends State<Med69> {
         Icons.navigate_before,
         size: 36.0,
       ),
-      onPressed: () =>
-          Navigator.pushNamed(context, '/select'),
+      onPressed: () => Navigator.pushNamed(context, '/select'),
     );
   }
 

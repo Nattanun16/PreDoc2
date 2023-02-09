@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:predoc1/models/user_model.dart';
 import 'package:predoc1/utility/my_constant.dart';
@@ -30,7 +31,12 @@ class _NearbyHospitalState extends State<NearbyHospital> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: MyConstant.primary,
-        title: Text('Find Nearby Hospital'),
+        title: Text(
+          'Find Nearby Hospital',
+          style: TextStyle(
+            color: Colors.green.shade800,
+          ),
+        ),leading: BackButton(color: Colors.black),
       ),
       body: GestureDetector(
         onTap: () => FocusScope.of(context).requestFocus(

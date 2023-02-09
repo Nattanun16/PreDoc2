@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/decision_tree.dart';
 
@@ -19,7 +20,9 @@ class _T11State extends State<T11> {
         behavior: HitTestBehavior.opaque,
         child: SafeArea(
           child: SingleChildScrollView(
-            child: Container(margin: const EdgeInsets.symmetric(vertical: 150),child: content()),
+            child: Container(
+                margin: const EdgeInsets.symmetric(vertical: 150),
+                child: content()),
           ),
         ),
       ),
@@ -28,7 +31,8 @@ class _T11State extends State<T11> {
 
   Widget content() {
     return Center(
-      child: Column(mainAxisAlignment: MainAxisAlignment.center,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           symptoms1Text(),
           symptoms3Text(),
@@ -45,7 +49,10 @@ class _T11State extends State<T11> {
   Widget symptoms1Text() {
     return Text(
       'โรคที่คุณมีโอกาสจะเป็น :',
-      style: MyConstant().h2Style(),
+      style: GoogleFonts.kanit(
+        color: Colors.green.shade800,
+        fontSize: 20,
+      ),
     );
   }
 
@@ -59,21 +66,24 @@ class _T11State extends State<T11> {
   Widget symptoms3Text() {
     return Text(
       'โรคตับอ่อนอักเสบ',
-      style: MyConstant().h2Style(),
+      style: GoogleFonts.kanit(
+        color: Colors.red.shade800,
+        fontSize: 18,
+      ),
     );
   }
 
   Widget procedures1Text() {
     return Text(
       'วิธีการรักษาเบื้องต้น',
-      style: MyConstant().h2Style(),
+      style: GoogleFonts.kanit(color: Colors.green.shade800, fontSize: 20),
     );
   }
 
   Widget procedures2Text() {
     return Text(
       'ควรไปพบแพทย์ที่สถานพยาบาล',
-      style: MyConstant().h2Style(),
+      style: GoogleFonts.kanit(color: Colors.red.shade800, fontSize: 18),
     );
   }
 
@@ -112,7 +122,7 @@ class _T11State extends State<T11> {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/nearbyHospital'),
+        onPressed: () => Navigator.pushNamed(context, '/select'),
         child: const Text(
           'เสร็จสิ้น',
           style: TextStyle(fontSize: 20),

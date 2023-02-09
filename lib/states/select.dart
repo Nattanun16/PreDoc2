@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:predoc1/utility/my_constant.dart';
 
 class Select extends StatefulWidget {
@@ -48,7 +49,10 @@ class _SelectState extends State<Select> {
         children: <Widget>[
           Text(
             'คุณกำลังค้นหาอะไร ?',
-            style: MyConstant().h2Style(),
+            style: GoogleFonts.kanit(
+              color: Colors.green.shade800,
+              fontSize: 18,
+            ),
           ),
           diagnose(),
           hospital(),
@@ -63,7 +67,7 @@ class _SelectState extends State<Select> {
       width: 250,
       height: 55,
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
+        style: ElevatedButton.styleFrom(primary: Colors.orange.shade900),
         onPressed: () => Navigator.pushNamed(context, '/med5'),
         child: const Text(
           'ทำแบบประเมินโรคเบื้องต้นจากอาการของผู้ใช้งาน',
@@ -80,7 +84,7 @@ class _SelectState extends State<Select> {
       width: 250,
       height: 60,
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
+        style: ElevatedButton.styleFrom(primary: Colors.orange.shade900),
         onPressed: () => Navigator.pushNamed(context, '/nearbyHospital'),
         child: const Text(
           'ค้นหาสถานพยาบาลใกล้เคียงคุณ',

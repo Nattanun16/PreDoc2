@@ -98,7 +98,7 @@ import 'package:predoc1/states/t42.dart';
 import 'package:predoc1/states/t43.dart';
 import 'package:predoc1/states/t44.dart';
 import 'package:predoc1/states/t45.dart';
-import 'package:predoc1/states/disease.dart';
+//import 'package:predoc1/states/disease.dart';
 import 'package:predoc1/states/t46.dart';
 import 'package:predoc1/states/t47.dart';
 import 'package:predoc1/states/t48.dart';
@@ -109,6 +109,7 @@ import 'package:predoc1/states/t6.dart';
 import 'package:predoc1/states/t7.dart';
 import 'package:predoc1/states/t8.dart';
 import 'package:predoc1/states/t9.dart';
+//import 'package:google_fonts/google_fonts.dart';
 
 Map<String, WidgetBuilder> map = {
   '/authen': (BuildContext context) => const Authen(),

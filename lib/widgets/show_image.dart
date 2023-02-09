@@ -5,6 +5,6 @@ class ShowImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset('images/image.png');
+    return Image.asset('images/predoclogo.png');
   }
 }
