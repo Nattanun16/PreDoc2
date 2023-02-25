@@ -109,7 +109,7 @@ import 'package:predoc1/states/t6.dart';
 import 'package:predoc1/states/t7.dart';
 import 'package:predoc1/states/t8.dart';
 import 'package:predoc1/states/t9.dart';
-//import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 Map<String, WidgetBuilder> map = {
   '/authen': (BuildContext context) => const Authen(),
