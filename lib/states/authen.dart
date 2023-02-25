@@ -168,10 +168,10 @@ class _AuthenState extends State<Authen> {
   ShowText newAppName() {
     return ShowText(
       data: MyConstant.appName,
-      textStyle: GoogleFonts.abhayaLibre(
+      textStyle: GoogleFonts.ubuntu(
           color: Colors.green.shade800,
-          fontSize: 35,
-          fontWeight: FontWeight.bold),
+          fontSize: 43,
+          fontWeight: FontWeight.w700),
     );
   }
 

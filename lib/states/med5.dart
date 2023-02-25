@@ -41,9 +41,10 @@ class _Med5State extends State<Med5> {
         children: <Widget>[
           Text(
             'คุณมีอาการ' + 'เจ็บหน้าอก' + 'หรือไม่?',
-            style: GoogleFonts.kanit(
+            style: GoogleFonts.sarabun(
               color: Colors.green.shade800,
               fontSize: 23,
+              fontWeight: FontWeight.w700,
             ),
           ),
           Image.asset(
@@ -72,7 +73,7 @@ class _Med5State extends State<Med5> {
   Container YesButton() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 25),
-      width: 250,
+      width: 200,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
@@ -90,7 +91,7 @@ class _Med5State extends State<Med5> {
   Container NoButton() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 0.25),
-      width: 250,
+      width: 200,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),

@@ -49,9 +49,10 @@ class _SelectState extends State<Select> {
         children: <Widget>[
           Text(
             'คุณกำลังค้นหาอะไร ?',
-            style: GoogleFonts.kanit(
+            style: GoogleFonts.sarabun(
               color: Colors.green.shade800,
-              fontSize: 18,
+              fontSize: 23,
+              fontWeight: FontWeight.w500,
             ),
           ),
           diagnose(),
@@ -65,13 +66,14 @@ class _SelectState extends State<Select> {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 16),
       width: 250,
-      height: 55,
+      height: 70,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: Colors.orange.shade900),
         onPressed: () => Navigator.pushNamed(context, '/med5'),
         child: const Text(
           'ทำแบบประเมินโรคเบื้องต้นจากอาการของผู้ใช้งาน',
           style: TextStyle(fontSize: 20),
+          textAlign: TextAlign.center,
         ),
       ),
     );
@@ -82,13 +84,14 @@ class _SelectState extends State<Select> {
       padding: const EdgeInsets.all(16.0),
       margin: const EdgeInsets.symmetric(vertical: 16),
       width: 250,
-      height: 60,
+      height: 89,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: Colors.orange.shade900),
         onPressed: () => Navigator.pushNamed(context, '/nearbyHospital'),
         child: const Text(
           'ค้นหาสถานพยาบาลใกล้เคียงคุณ',
           style: TextStyle(fontSize: 20),
+          textAlign: TextAlign.center,
         ),
       ),
     );
