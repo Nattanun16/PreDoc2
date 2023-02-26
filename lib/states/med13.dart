@@ -41,8 +41,11 @@ class _Med13State extends State<Med13> {
         children: <Widget>[
           Text(
             'คุณมีอาการ' + 'ท้องอืด' + 'หรือไม่?',
-            style:
-                GoogleFonts.kanit(color: Colors.green.shade800, fontSize: 23),
+            style: GoogleFonts.sarabun(
+              color: Colors.green.shade800,
+              fontSize: 23,
+              fontWeight: FontWeight.w700,
+            ),
           ),
           Image.asset(
             'images/flatulence.png',
@@ -78,7 +81,7 @@ class _Med13State extends State<Med13> {
             Navigator.pushNamed(context, '/' + medNode.right.label),
         child: const Text(
           'ใช่',
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: 21),
         ),
       ),
     );
@@ -95,7 +98,7 @@ class _Med13State extends State<Med13> {
         onPressed: () => Navigator.pushNamed(context, '/' + medNode.left.label),
         child: const Text(
           'ไม่ใช่',
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: 21),
         ),
       ),
     );

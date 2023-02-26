@@ -41,8 +41,10 @@ class _Med18bState extends State<Med18b> {
         children: <Widget>[
           Text(
             'คุณมีอาการ' + 'อ่อนเพลีย' + 'หรือไม่?',
-            style:
-                GoogleFonts.kanit(color: Colors.green.shade800, fontSize: 23),
+            style: GoogleFonts.sarabun(
+              color: Colors.green.shade800,
+              fontSize: 23,
+            ),
           ),
           Image.asset(
             'images/tired.png',
@@ -78,7 +80,7 @@ class _Med18bState extends State<Med18b> {
             Navigator.pushNamed(context, '/' + medNode.right.label),
         child: const Text(
           'ใช่',
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: 21),
         ),
       ),
     );
@@ -95,7 +97,7 @@ class _Med18bState extends State<Med18b> {
         onPressed: () => Navigator.pushNamed(context, '/' + medNode.left.label),
         child: const Text(
           'ไม่ใช่',
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: 21),
         ),
       ),
     );

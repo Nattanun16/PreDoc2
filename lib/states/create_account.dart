@@ -320,11 +320,16 @@ class _CreateAccountState extends State<CreateAccount> {
     return RadioListTile(
       subtitle: ShowText(
         data: 'ผู้ใช้งาน',
-        textStyle: GoogleFonts.kanit(color: Colors.green.shade800),
+        textStyle: GoogleFonts.sarabun(
+          color: Colors.green.shade800,
+          fontWeight: FontWeight.w500,
+        ),
       ),
       title: ShowText(
         data: 'User',
-        textStyle: GoogleFonts.creteRound(color: Colors.green.shade800),
+        textStyle: GoogleFonts.creteRound(
+          color: Colors.green.shade800,
+        ),
       ),
       value: 'user',
       groupValue: typeUser,
@@ -340,11 +345,16 @@ class _CreateAccountState extends State<CreateAccount> {
     return RadioListTile(
       subtitle: ShowText(
         data: 'โรงพยาบาล',
-        textStyle: GoogleFonts.kanit(color: Colors.green.shade800),
+        textStyle: GoogleFonts.sarabun(
+          color: Colors.green.shade800,
+          fontWeight: FontWeight.w500,
+        ),
       ),
       title: ShowText(
         data: 'Hospital',
-        textStyle: GoogleFonts.creteRound(color: Colors.green.shade800),
+        textStyle: GoogleFonts.creteRound(
+          color: Colors.green.shade800,
+        ),
       ),
       value: 'hospital',
       groupValue: typeHospital,

@@ -41,8 +41,11 @@ class _Med10bState extends State<Med10b> {
         children: <Widget>[
           Text(
             'คุณมีอาการ' + 'ปวดท้องแบบเกร็ง' + 'หรือไม่?',
-            style:
-                GoogleFonts.kanit(color: Colors.green.shade800, fontSize: 23),
+            style: GoogleFonts.sarabun(
+              color: Colors.green.shade800,
+              fontSize: 23,
+              fontWeight: FontWeight.w700,
+            ),
           ),
           Image.asset(
             'images/abdominalpain.png',
@@ -78,7 +81,7 @@ class _Med10bState extends State<Med10b> {
             Navigator.pushNamed(context, '/' + medNode.right.label),
         child: const Text(
           'ใช่',
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: 21),
         ),
       ),
     );
@@ -95,7 +98,7 @@ class _Med10bState extends State<Med10b> {
         onPressed: () => Navigator.pushNamed(context, '/' + medNode.left.label),
         child: const Text(
           'ไม่ใช่',
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: 21),
         ),
       ),
     );

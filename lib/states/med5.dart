@@ -73,7 +73,7 @@ class _Med5State extends State<Med5> {
   Container YesButton() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 25),
-      width: 200,
+      width: 250,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
@@ -81,7 +81,7 @@ class _Med5State extends State<Med5> {
             Navigator.pushNamed(context, '/' + medNode.right.label),
         child: const Text(
           'ใช่',
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: 21),
         ),
       ),
     );
@@ -91,14 +91,14 @@ class _Med5State extends State<Med5> {
   Container NoButton() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 0.25),
-      width: 200,
+      width: 250,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
         onPressed: () => Navigator.pushNamed(context, '/' + medNode.left.label),
         child: const Text(
           'ไม่ใช่',
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: 21),
         ),
       ),
     );

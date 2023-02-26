@@ -40,8 +40,12 @@ class _Med19bState extends State<Med19b> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            'คุณมีอาการ'+'เวียนศีรษะ'+'หรือไม่?',
-            style: GoogleFonts.kanit(color: Colors.green.shade800,fontSize: 20),
+            'คุณมีอาการ' + 'เวียนศีรษะ' + 'หรือไม่?',
+            style: GoogleFonts.sarabun(
+              color: Colors.green.shade800,
+              fontSize: 23,
+              fontWeight: FontWeight.w700,
+            ),
           ),
           YesButton(),
           NoButton(),
@@ -56,8 +60,7 @@ class _Med19bState extends State<Med19b> {
         Icons.navigate_before,
         size: 36.0,
       ),
-      onPressed: () =>
-          Navigator.pushNamed(context, '/select'),
+      onPressed: () => Navigator.pushNamed(context, '/select'),
     );
   }
 
@@ -69,10 +72,11 @@ class _Med19bState extends State<Med19b> {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/'+medNode.right.label),
+        onPressed: () =>
+            Navigator.pushNamed(context, '/' + medNode.right.label),
         child: const Text(
           'ใช่',
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: 21),
         ),
       ),
     );
@@ -86,10 +90,10 @@ class _Med19bState extends State<Med19b> {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/'+medNode.left.label),
+        onPressed: () => Navigator.pushNamed(context, '/' + medNode.left.label),
         child: const Text(
           'ไม่ใช่',
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: 21),
         ),
       ),
     );
