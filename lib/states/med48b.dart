@@ -41,8 +41,11 @@ class _Med48bState extends State<Med48b> {
         children: <Widget>[
           Text(
             'คุณมีอาการ' + 'ตาแดง' + 'หรือไม่?',
-            style:
-                GoogleFonts.kanit(color: Colors.green.shade800, fontSize: 20),
+            style: GoogleFonts.sarabun(
+              color: Colors.green.shade800,
+              fontSize: 23,
+              fontWeight: FontWeight.w700,
+            ),
           ),
           YesButton(),
           NoButton(),
@@ -73,7 +76,7 @@ class _Med48bState extends State<Med48b> {
             Navigator.pushNamed(context, '/' + medNode.right.label),
         child: const Text(
           'ใช่',
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: 21),
         ),
       ),
     );
@@ -90,7 +93,7 @@ class _Med48bState extends State<Med48b> {
         onPressed: () => Navigator.pushNamed(context, '/' + medNode.left.label),
         child: const Text(
           'ไม่ใช่',
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: 21),
         ),
       ),
     );

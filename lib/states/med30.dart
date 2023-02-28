@@ -41,9 +41,10 @@ class _Med30State extends State<Med30> {
         children: <Widget>[
           Text(
             'คุณมีอาการ' + 'อาเจียน' + 'หรือไม่?',
-            style: GoogleFonts.kanit(
+            style: GoogleFonts.sarabun(
               color: Colors.green.shade800,
               fontSize: 23,
+              fontWeight: FontWeight.w700,
             ),
           ),
           Image.asset(
@@ -79,7 +80,7 @@ class _Med30State extends State<Med30> {
             Navigator.pushNamed(context, '/' + medNode.right.label),
         child: const Text(
           'ใช่',
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: 21),
         ),
       ),
     );
@@ -95,7 +96,7 @@ class _Med30State extends State<Med30> {
         onPressed: () => Navigator.pushNamed(context, '/' + medNode.left.label),
         child: const Text(
           'ไม่ใช่',
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: 21),
         ),
       ),
     );
