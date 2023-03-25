@@ -41,8 +41,11 @@ class _Med91State extends State<Med91> {
         children: <Widget>[
           Text(
             'คุณมีอาการ' + 'หนังตาตก' + 'หรือไม่?',
-            style:
-                GoogleFonts.kanit(color: Colors.green.shade800, fontSize: 20),
+            style: GoogleFonts.sarabun(
+              color: Colors.green.shade800,
+              fontSize: 23,
+              fontWeight: FontWeight.w700,
+            ),
           ),
           YesButton(),
           NoButton(),

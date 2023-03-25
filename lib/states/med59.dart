@@ -41,8 +41,11 @@ class _Med59State extends State<Med59> {
         children: <Widget>[
           Text(
             'คุณมีอาการ' + 'พูดลำบาก' + 'หรือไม่?',
-            style:
-                GoogleFonts.kanit(color: Colors.green.shade800, fontSize: 23),
+            style: GoogleFonts.sarabun(
+              color: Colors.green.shade800,
+              fontSize: 23,
+              fontWeight: FontWeight.w700,
+            ),
           ),
           Image.asset(
             'images/difficultyspeaking.png',

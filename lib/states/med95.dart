@@ -41,8 +41,11 @@ class _Med95State extends State<Med95> {
         children: <Widget>[
           Text(
             'คุณมีอาการ' + 'หายใจเร็ว' + 'หรือไม่?',
-            style:
-                GoogleFonts.kanit(color: Colors.green.shade800, fontSize: 23),
+            style: GoogleFonts.sarabun(
+              color: Colors.green.shade800,
+              fontSize: 23,
+              fontWeight: FontWeight.w700,
+            ),
           ),
           Image.asset(
             'images/rapidbreathing.png',

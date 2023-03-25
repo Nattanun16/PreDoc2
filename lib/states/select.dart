@@ -84,7 +84,7 @@ class _SelectState extends State<Select> {
       padding: const EdgeInsets.all(16.0),
       margin: const EdgeInsets.symmetric(vertical: 16),
       width: 250,
-      height: 89,
+      height: 100,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: Colors.orange.shade900),
         onPressed: () => Navigator.pushNamed(context, '/nearbyHospital'),

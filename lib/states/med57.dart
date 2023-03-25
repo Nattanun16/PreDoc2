@@ -41,8 +41,11 @@ class _Med57State extends State<Med57> {
         children: <Widget>[
           Text(
             'คุณมีอาการ' + 'ภาวะเลือดออกผิดปกติ' + 'หรือไม่?',
-            style:
-                GoogleFonts.kanit(color: Colors.green.shade800, fontSize: 23),
+            style: GoogleFonts.sarabun(
+              color: Colors.green.shade800,
+              fontSize: 23,
+              fontWeight: FontWeight.w700,
+            ),
           ),
           Image.asset(
             'images/abnormalbleeding.png',

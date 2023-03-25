@@ -41,8 +41,11 @@ class _Med70State extends State<Med70> {
         children: <Widget>[
           Text(
             'คุณมีอาการ' + 'อาเจียนมีสีเหลืองปนเขียว' + 'หรือไม่?',
-            style:
-                GoogleFonts.kanit(color: Colors.green.shade800, fontSize: 20),
+            style: GoogleFonts.sarabun(
+              color: Colors.green.shade800,
+              fontSize: 23,
+              fontWeight: FontWeight.w700,
+            ),
           ),
           YesButton(),
           NoButton(),

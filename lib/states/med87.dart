@@ -41,9 +41,10 @@ class _Med87State extends State<Med87> {
         children: <Widget>[
           Text(
             'คุณมีอาการ' + 'ชารอบปาก' + 'หรือไม่?',
-            style: GoogleFonts.kanit(
+            style: GoogleFonts.sarabun(
               color: Colors.green.shade800,
               fontSize: 23,
+              fontWeight: FontWeight.w700,
             ),
           ),
           Image.asset(

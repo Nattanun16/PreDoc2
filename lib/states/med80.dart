@@ -41,8 +41,11 @@ class _Med80State extends State<Med80> {
         children: <Widget>[
           Text(
             'คุณมีอาการ' + 'มีผื่น' + 'หรือไม่?',
-            style:
-                GoogleFonts.kanit(color: Colors.green.shade800, fontSize: 20),
+            style: GoogleFonts.sarabun(
+              color: Colors.green.shade800,
+              fontSize: 23,
+              fontWeight: FontWeight.w700,
+            ),
           ),
           Image.asset(
             'images/rash.png',

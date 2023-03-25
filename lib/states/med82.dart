@@ -41,8 +41,11 @@ class _Med82State extends State<Med82> {
         children: <Widget>[
           Text(
             'คุณมีอาการ' + 'ปวดเมื่อยกล้ามเนื้อ' + 'หรือไม่?',
-            style:
-                GoogleFonts.kanit(color: Colors.green.shade800, fontSize: 20),
+            style: GoogleFonts.sarabun(
+              color: Colors.green.shade800,
+              fontSize: 23,
+              fontWeight: FontWeight.w700,
+            ),
           ),
           Image.asset(
             'images/muscleaches.png',

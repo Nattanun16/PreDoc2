@@ -41,8 +41,11 @@ class _Med93State extends State<Med93> {
         children: <Widget>[
           Text(
             'คุณมีอาการ' + 'มองเห็นไม่ชัด' + 'หรือไม่?',
-            style:
-                GoogleFonts.kanit(color: Colors.green.shade800, fontSize: 23),
+            style: GoogleFonts.sarabun(
+              color: Colors.green.shade800,
+              fontSize: 23,
+              fontWeight: FontWeight.w700,
+            ),
           ),
           Image.asset(
             'images/blurryvision.png',

@@ -41,8 +41,11 @@ class _Med62State extends State<Med62> {
         children: <Widget>[
           Text(
             'คุณมีอาการ' + 'เจ็บคอ' + 'หรือไม่?',
-            style:
-                GoogleFonts.kanit(color: Colors.green.shade800, fontSize: 23),
+            style: GoogleFonts.sarabun(
+              color: Colors.green.shade800,
+              fontSize: 23,
+              fontWeight: FontWeight.w700,
+            ),
           ),
           Image.asset(
             'images/sorethroat.png',
