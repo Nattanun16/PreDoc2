@@ -47,11 +47,14 @@ class _T5State extends State<T5> {
   }
 
   Widget symptoms1Text() {
-    return Text('โรคที่คุณมีโอกาสจะเป็น :',
-        style: GoogleFonts.kanit(
-          color: Colors.green.shade800,
-          fontSize: 20,
-        ));
+    return Text(
+      'โรคที่คุณมีโอกาสจะเป็น :',
+      style: GoogleFonts.sarabun(
+        color: Colors.green.shade800,
+        fontSize: 20,
+        fontWeight: FontWeight.w700,
+      ),
+    );
   }
 
   /* Widget symptoms2Text() {
@@ -64,9 +67,10 @@ class _T5State extends State<T5> {
   Widget symptoms3Text() {
     return Text(
       'หัวใจขาดเลือดเฉียบพลัน',
-      style: GoogleFonts.kanit(
+      style: GoogleFonts.sarabun(
         color: Colors.red.shade800,
         fontSize: 18,
+        fontWeight: FontWeight.w700,
       ),
     );
   }
@@ -74,14 +78,22 @@ class _T5State extends State<T5> {
   Widget procedures1Text() {
     return Text(
       'วิธีการรักษาเบื้องต้น',
-      style: GoogleFonts.kanit(color: Colors.green.shade800, fontSize: 20),
+      style: GoogleFonts.sarabun(
+        color: Colors.green.shade800,
+        fontSize: 20,
+        fontWeight: FontWeight.w700,
+      ),
     );
   }
 
   Widget procedures2Text() {
     return Text(
       'ควรไปพบแพทย์ที่สถานพยาบาล',
-      style: GoogleFonts.kanit(color: Colors.red.shade800, fontSize: 18),
+      style: GoogleFonts.sarabun(
+        color: Colors.red.shade800,
+        fontSize: 18,
+        fontWeight: FontWeight.w700,
+      ),
     );
   }
 

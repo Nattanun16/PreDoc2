@@ -66,9 +66,10 @@ class _T4State extends State<T4> {
   Widget symptoms3Text() {
     return Text(
       'กรดไหลย้อน',
-      style: GoogleFonts.kanit(
+      style: GoogleFonts.sarabun(
         color: Colors.red.shade800,
         fontSize: 18,
+        fontWeight: FontWeight.w700,
       ),
     );
   }
@@ -86,9 +87,10 @@ class _T4State extends State<T4> {
   Widget procedures2Text() {
     return Text(
       'ควรไปพบแพทย์ที่สถานพยาบาล',
-      style: GoogleFonts.kanit(
+      style: GoogleFonts.sarabun(
         color: Colors.red.shade800,
         fontSize: 18,
+        fontWeight: FontWeight.w700,
       ),
     );
   }
