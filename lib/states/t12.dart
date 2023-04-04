@@ -49,9 +49,10 @@ class _T12State extends State<T12> {
   Widget symptoms1Text() {
     return Text(
       'โรคที่คุณมีโอกาสจะเป็น :',
-      style: GoogleFonts.kanit(
+      style: GoogleFonts.sarabun(
         color: Colors.green.shade800,
         fontSize: 20,
+        fontWeight: FontWeight.w700,
       ),
     );
   }
@@ -66,9 +67,10 @@ class _T12State extends State<T12> {
   Widget symptoms3Text() {
     return Text(
       'คอตีบ',
-      style: GoogleFonts.kanit(
+      style: GoogleFonts.sarabun(
         color: Colors.red.shade800,
         fontSize: 18,
+        fontWeight: FontWeight.w700,
       ),
     );
   }
@@ -76,9 +78,10 @@ class _T12State extends State<T12> {
   Widget procedures1Text() {
     return Text(
       'วิธีการรักษาเบื้องต้น',
-      style: GoogleFonts.kanit(
+      style: GoogleFonts.sarabun(
         color: Colors.green.shade800,
         fontSize: 20,
+        fontWeight: FontWeight.w700,
       ),
     );
   }
@@ -86,9 +89,10 @@ class _T12State extends State<T12> {
   Widget procedures2Text() {
     return Text(
       'ควรไปพบแพทย์ที่สถานพยาบาล',
-      style: GoogleFonts.kanit(
+      style: GoogleFonts.sarabun(
         color: Colors.red.shade800,
         fontSize: 18,
+        fontWeight: FontWeight.w700,
       ),
     );
   }

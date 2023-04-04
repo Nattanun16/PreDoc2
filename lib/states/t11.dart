@@ -52,7 +52,7 @@ class _T11State extends State<T11> {
       style: GoogleFonts.sarabun(
         color: Colors.green.shade800,
         fontSize: 20,
-        fontWeight: FontWeight.w600,
+        fontWeight: FontWeight.w700,
       ),
     );
   }
