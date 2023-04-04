@@ -30,7 +30,7 @@ class _T45State extends State<T45> {
     );
   }
 
- /* Widget show() {
+  /* Widget show() {
     return Align(
       alignment: Alignment.centerLeft,
       child: content(),
@@ -47,34 +47,40 @@ class _T45State extends State<T45> {
         findhospital1(),
         findhospital2(),
         findhospital3(),
-        Align(alignment: Alignment.bottomCenter,child: successButton()),
+        Align(alignment: Alignment.bottomCenter, child: successButton()),
       ],
     );
   }
 
   Widget symptoms1Text() {
-    return Container(margin: EdgeInsets.symmetric(vertical: 10),
-      child: Align(alignment: Alignment.centerLeft,
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 10),
+      child: Align(
+        alignment: Alignment.centerLeft,
         child: Text(
           'โรคที่คุณมีโอกาสจะเป็น :',
-          style: GoogleFonts.kanit(
-        color: Colors.green.shade800,
-        fontSize: 20,
-      ),
+          style: GoogleFonts.sarabun(
+            color: Colors.green.shade800,
+            fontSize: 20,
+            fontWeight: FontWeight.w700,
+          ),
         ),
       ),
     );
   }
 
   Widget symptoms2Text() {
-    return Container(margin: EdgeInsets.symmetric(vertical: 10),
-      child: Align(alignment: Alignment.centerLeft,
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 10),
+      child: Align(
+        alignment: Alignment.centerLeft,
         child: Text(
           'ซิกัวเทอร่า',
-          style: GoogleFonts.kanit(
-        color: Colors.red.shade800,
-        fontSize: 18,
-      ),
+          style: GoogleFonts.sarabun(
+            color: Colors.red.shade800,
+            fontSize: 18,
+            fontWeight: FontWeight.w700,
+          ),
         ),
       ),
     );
@@ -88,28 +94,34 @@ class _T45State extends State<T45> {
   }*/
 
   Widget procedures1Text() {
-    return Container(margin: EdgeInsets.symmetric(vertical: 10),
-      child: Align(alignment: Alignment.centerLeft,
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 10),
+      child: Align(
+        alignment: Alignment.centerLeft,
         child: Text(
           'วิธีการรักษาเบื้องต้น',
-          style: GoogleFonts.kanit(
-        color: Colors.green.shade800,
-        fontSize: 20,
-      ),
+          style: GoogleFonts.sarabun(
+            color: Colors.green.shade800,
+            fontSize: 20,
+            fontWeight: FontWeight.w700,
+          ),
         ),
       ),
     );
   }
 
   Widget procedures2Text() {
-    return Container(margin: EdgeInsets.symmetric(vertical: 10),
-      child: Align(alignment: Alignment.centerLeft,
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 10),
+      child: Align(
+        alignment: Alignment.centerLeft,
         child: Text(
           'ควรไปพบแพทย์ที่สถานพยาบาล',
-          style: GoogleFonts.kanit(
-        color: Colors.red.shade800,
-        fontSize: 18,
-      ),
+          style: GoogleFonts.sarabun(
+            color: Colors.red.shade800,
+            fontSize: 18,
+            fontWeight: FontWeight.w700,
+          ),
         ),
       ),
     );
