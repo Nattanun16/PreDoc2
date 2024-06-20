@@ -71,7 +71,7 @@ class _LevelState extends State<Level> {
       width: 100,
       height: 30,
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
+        style: ElevatedButton.styleFrom(backgroundColor: MyConstant.dark),
         onPressed: () => Navigator.pushNamed(context, '/disease'),
         child: const Text(
           'ยืนยัน',

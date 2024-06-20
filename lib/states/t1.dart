@@ -142,7 +142,7 @@ class _T1State extends State<T1> {
       width: 250,
       height: 50,
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
+        style: ElevatedButton.styleFrom(backgroundColor: MyConstant.dark),
         onPressed: () => Navigator.pushNamed(context, '/select'),
         child: const Text(
           'เสร็จสิ้น',

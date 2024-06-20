@@ -71,7 +71,7 @@ class _Med46aState extends State<Med46a> {
       width: 250,
       height: 50,
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
+        style: ElevatedButton.styleFrom(backgroundColor: MyConstant.dark),
         onPressed: () =>
             Navigator.pushNamed(context, '/' + medNode.right.label),
         child: const Text(
@@ -89,7 +89,7 @@ class _Med46aState extends State<Med46a> {
       width: 250,
       height: 50,
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
+        style: ElevatedButton.styleFrom(backgroundColor: MyConstant.dark),
         onPressed: () => Navigator.pushNamed(context, '/' + medNode.left.label),
         child: const Text(
           'ไม่ใช่',

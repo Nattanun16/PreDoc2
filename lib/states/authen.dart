@@ -70,7 +70,7 @@ class _AuthenState extends State<Authen> {
       margin: EdgeInsets.symmetric(vertical: 16),
       width: 250,
       child: ElevatedButton(
-          style: ElevatedButton.styleFrom(primary: MyConstant.dark),
+          style: ElevatedButton.styleFrom(backgroundColor: MyConstant.dark),
           onPressed: () {
             if (formKey.currentState!.validate()) {
               String user = userController.text;

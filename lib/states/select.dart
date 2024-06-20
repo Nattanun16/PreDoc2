@@ -68,7 +68,7 @@ class _SelectState extends State<Select> {
       width: 250,
       height: 70,
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: Colors.orange.shade900),
+        style: ElevatedButton.styleFrom(backgroundColor: Colors.orange.shade900),
         onPressed: () => Navigator.pushNamed(context, '/med5'),
         child: const Text(
           'ทำแบบประเมินโรคเบื้องต้นจากอาการของผู้ใช้งาน',
@@ -86,7 +86,7 @@ class _SelectState extends State<Select> {
       width: 250,
       height: 100,
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: Colors.orange.shade900),
+        style: ElevatedButton.styleFrom(backgroundColor: Colors.orange.shade900),
         onPressed: () => Navigator.pushNamed(context, '/nearbyHospital'),
         child: const Text(
           'ค้นหาสถานพยาบาลใกล้เคียงคุณ',

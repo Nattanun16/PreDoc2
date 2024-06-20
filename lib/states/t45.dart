@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:predoc1/utility/my_constant.dart';
 import 'package:predoc1/utility/decision_tree.dart';
-import 'package:predoc1/widgets/show_text.dart';
+//import 'package:predoc1/widgets/show_text.dart';
 
 class T45 extends StatefulWidget {
   const T45({Key? key}) : super(key: key);
@@ -171,7 +171,7 @@ class _T45State extends State<T45> {
       width: 250,
       height: 50,
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
+        style: ElevatedButton.styleFrom(backgroundColor: MyConstant.dark),
         onPressed: () => Navigator.pushNamed(context, '/select'),
         child: const Text(
           'เสร็จสิ้น',

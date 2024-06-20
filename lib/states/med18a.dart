@@ -17,6 +17,7 @@ class _Med18aState extends State<Med18a> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       body: GestureDetector(
         onTap: () => FocusScope.of(context).requestFocus(FocusScopeNode()),
         behavior: HitTestBehavior.opaque,
@@ -76,7 +77,7 @@ class _Med18aState extends State<Med18a> {
       width: 250,
       height: 50,
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
+        style: ElevatedButton.styleFrom(backgroundColor: MyConstant.dark),
         onPressed: () =>
             Navigator.pushNamed(context, '/' + medNode.right.label),
         child: const Text(
@@ -94,7 +95,7 @@ class _Med18aState extends State<Med18a> {
       width: 250,
       height: 50,
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
+        style: ElevatedButton.styleFrom(backgroundColor: MyConstant.dark),
         onPressed: () => Navigator.pushNamed(context, '/' + medNode.left.label),
         child: const Text(
           'ไม่ใช่',
